@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SNAPS" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\SNAPS" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\SNAPS" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Converter\fillpixelmatrix.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Encoder\ColorConversion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Encoder\ColorConversion.h" />
+		<Unit filename="Encoder\bmp2jpg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Encoder\bmp2jpg.h" />
+		<Unit filename="Encoder\dct.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Encoder\dct.h" />
+		<Unit filename="Encoder\ejpgl.h" />
+		<Unit filename="Encoder\huffman.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Encoder\huffman.h" />
+		<Unit filename="Encoder\jpeg.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Encoder\jpeg.h" />
+		<Unit filename="Encoder\zzq.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Encoder\zzq.h" />
+		<Unit filename="Filters\andrewedges.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Filters\circledetect.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Filters\circledetect.h" />
+		<Unit filename="Filters\edgedetect.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Filters\edgedetect.h" />
+		<Unit filename="Filters\fast-edge.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Filters\fast-edge.h" />
+		<Unit filename="Filters\histogram.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Filters\histogram.h" />
+		<Unit filename="Filters\imageio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Filters\imageio.h" />
+		<Unit filename="H264Decoder\bitstream.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\bitstream.h" />
+		<Unit filename="H264Decoder\bitstream_types.h" />
+		<Unit filename="H264Decoder\cabac.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\cabac.h" />
+		<Unit filename="H264Decoder\cabac_data.h" />
+		<Unit filename="H264Decoder\common.h" />
+		<Unit filename="H264Decoder\decode.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\decode.h" />
+		<Unit filename="H264Decoder\decode_image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\decode_image_intra.h" />
+		<Unit filename="H264Decoder\decode_slice.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\decode_slice.h" />
+		<Unit filename="H264Decoder\defaulttables.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\defaulttables.h" />
+		<Unit filename="H264Decoder\filter_image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\intmath.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\intmath.h" />
+		<Unit filename="H264Decoder\inverse_transforms.h" />
+		<Unit filename="H264Decoder\lud.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\lud.h" />
+		<Unit filename="H264Decoder\ludh264.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\ludh264.h" />
+		<Unit filename="H264Decoder\output.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\syntax.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\syntax.h" />
+		<Unit filename="H264Decoder\syntax_types.h" />
+		<Unit filename="H264Decoder\sysinfo.h" />
+		<Unit filename="H264Decoder\system.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Decoder\system.h" />
+		<Unit filename="H264Parser\avccparser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="H264Parser\avccparser.h" />
+		<Unit filename="H264Parser\commonparser.h" />
+		<Unit filename="H264Parser\iframeparser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="filemanager.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="filemanager.h" />
+		<Unit filename="image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="image.h" />
+		<Unit filename="populatearray.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="populatearray.h" />
+		<Unit filename="sortimagearray.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sortimagearray.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
