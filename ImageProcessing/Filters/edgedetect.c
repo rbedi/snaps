@@ -24,12 +24,19 @@ void readpicture(unsigned char* buffy, int j)
 
 }
 
+//takes an image and performs Canny Edge Detection Algorithm
+//Should take as arg image data (not implemented)
+//
 int canny(int j)
 {
 
 	int w, h, i,u;
     unsigned char yo[522240];
+    //yo: array to store hard coded image (temp)
 
+//********
+//Temp code, directly read image instead of pass in
+//Data is in pgm-grayscale file (check starter for test images)
 	u = 0;
 
 	if(u==1)
@@ -42,6 +49,10 @@ int canny(int j)
        //img.pixel_data =  CurrentFrame.framebits;
 	}
 
+//***********
+
+    //These numbers should be constant.
+    //values should be this, though
     w = 960;
     h = 544;
     img.width = w;
@@ -50,13 +61,16 @@ int canny(int j)
     img_out.width = 960;
     img_out.height = 544;
 
+    //death to malloc! (try to recycle memory)
+    //idea- can we overwrite pass in image instead of creating brand new one?
     unsigned char *img_gauss_data = malloc(w * h * sizeof(char));
     img_gauss.pixel_data = img_gauss_data;
+    //vvvprep stuff fpr edge filter, borrowed code (look up ourselves)
     gaussian_noise_reduce(&img, &img_gauss);
     //printf("*** performing morphological closing ***\n");
     //morph_close(&img, &img_scratch, &img_scratch2, &img_gauss);
-    canny_edge_detect(&img_gauss, &img);
-    write_pgm_image(&img,j);
+    canny_edge_detect(&img_gauss, &img); //actual Canny alg, again borrowed code
+    write_pgm_image(&img,j); //for debugging output, saves output as pgm
     free(img_gauss_data);
 	return(1);
 }
@@ -66,6 +80,7 @@ void savegreyscale(int q)
   int i;
   int j;
 
+    //BMP header
   unsigned char header[19];
   header[0] = 80;
   header[1] = 53;
@@ -102,7 +117,10 @@ void savegreyscale(int q)
 }
 
 
-
+//Start of analysis process.
+//called from main fn.
+//arg j: curren image
+//arg total: number of corners detected in image
 int edgedetect(int j,unsigned int* total)
 {
   int i = 0;
@@ -125,19 +143,25 @@ int edgedetect(int j,unsigned int* total)
 
   canny(j);
 
+
   for(i=0;i<59;i++)
-  {
+  {(image.c)
       for(k=0;k<33;k++)
       {
           if(numberofhits[0]==100)
           {
               return 1;
           }
-
+          //segment analyzed image and perform corner detection
+    //looks at a small square, performs line integral over all angles and finds
+    //any perpendicular strong lines.
+            //andrew function, ask him if lost.
           cornerdetect(img.pixel_data,i,k,numberofhits,rows,cols);
       }
   }
-
+    //Filter code (get rid of false positives, eg sun or earth)
+    //computes average location, draws circle about it, and deletes outlyers.
+    //clustering
   if(numberofhits[0]>0)
   {
       for(i=0;i<numberofhits[0];i++)
