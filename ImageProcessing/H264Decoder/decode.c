@@ -149,7 +149,7 @@ RetCode decode_nalu(uint8_t* data, uint32_t* length)
     {
       // Finish the previous pic decoding
      // end_picture(&pdd);
-      LUD_TRACE(TRACE_INFO, "Parsing SPS\n");
+      LUD_TRACE(TRACE_INFO, "(decode.c) Parsing SPS\n");
       seq_parameter_set_rbsp_t* sps;
       r = parse_sps(&nalu, &sps);
       if (RET_SUCCESS != r)
@@ -166,7 +166,7 @@ RetCode decode_nalu(uint8_t* data, uint32_t* length)
     {
       // Finish the previous pic decoding
 //      end_picture(&pdd);
-      LUD_TRACE(TRACE_INFO, "Parsing PPS\n");
+      LUD_TRACE(TRACE_INFO, "(decode.c) Parsing PPS\n");
       pic_parameter_set_rbsp_t* pps;
       r = parse_pps(&nalu, &pps);
       if (RET_SUCCESS != r)

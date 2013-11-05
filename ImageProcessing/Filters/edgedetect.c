@@ -145,7 +145,7 @@ int edgedetect(int j,unsigned int* total)
 
 
   for(i=0;i<59;i++)
-  {(image.c)
+  {//(image.c)
       for(k=0;k<33;k++)
       {
           if(numberofhits[0]==100)
