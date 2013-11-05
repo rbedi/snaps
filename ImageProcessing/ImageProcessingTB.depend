@@ -387,3 +387,355 @@
 
 1363224609 source:c:\snaps\code\lib\imageprocessing\filters\canny2.c
 
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\converter\fillpixelmatrix.c
+	<stdio.h>
+	<stdlib.h>
+	"../image.h"
+	"fillpixelmatrix.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\image.h
+	"filemanager.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\filemanager.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"ff.h"
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\converter\fillpixelmatrix.h
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\encoder\bmp2jpg.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	"ejpgl.h"
+	"bmp2jpg.h"
+	"ColorConversion.h"
+	"dct.h"
+	"huffman.h"
+	"jpeg.h"
+	"zzq.h"
+	"../image.h"
+	"../Converter/fillpixelmatrix.h"
+	"ff.h"
+	"../image.h"
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\encoder\ejpgl.h
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\encoder\bmp2jpg.h
+	"ejpgl.h"
+	"../image.h"
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\encoder\colorconversion.h
+	"ejpgl.h"
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\encoder\dct.h
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\encoder\huffman.h
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\encoder\jpeg.h
+	"ejpgl.h"
+	"../image.h"
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\encoder\zzq.h
+	"ejpgl.h"
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\encoder\colorconversion.c
+	"ejpgl.h"
+	"ColorConversion.h"
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\encoder\dct.c
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"dct.h"
+	"zzq.h"
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\encoder\huffman.c
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"huffman.h"
+	<string.h>
+	"bmp2jpg.h"
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\encoder\jpeg.c
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"../image.h"
+	"jpeg.h"
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\encoder\zzq.c
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"zzq.h"
+	"huffman.h"
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\filemanager.c
+	"filemanager.h"
+	"ff.h"
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\andrewedges.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\circledetect.c
+	"../image.h"
+	<math.h>
+	"circledetect.h"
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\filters\circledetect.h
+	"../image.h"
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\edgedetect.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	"../image.h"
+	"edgedetect.h"
+	<string.h>
+	"imageio.h"
+	"fast-edge.h"
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\filters\edgedetect.h
+	"../image.h"
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\filters\imageio.h
+
+1383609788 c:\users\sean\documents\github\snaps\imageprocessing\filters\fast-edge.h
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\fast-edge.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"imageio.h"
+	"fast-edge.h"
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\histogram.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"../image.h"
+
+1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\imageio.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"imageio.h"
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\bitstream.c
+	<inttypes.h>
+	"bitstream_types.h"
+	"intmath.h"
+	<string.h>
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\bitstream_types.h
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\intmath.h
+	<inttypes.h>
+	"common.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\common.h
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+	<inttypes.h>
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\cabac.c
+	<stdint.h>
+
+1383617704 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\decode.c
+	"syntax.h"
+	"decode.h"
+	<string.h>
+	"defaulttables.h"
+	"bitstream.h"
+	"decode_slice.h"
+	"system.h"
+	"cabac.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\syntax.h
+	"syntax_types.h"
+	"bitstream_types.h"
+	"decode.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\syntax_types.h
+	<inttypes.h>
+	"common.h"
+	"bitstream_types.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\decode.h
+	"common.h"
+	"syntax.h"
+	"bitstream_types.h"
+	"../image.h"
+	"ff.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\defaulttables.h
+	<inttypes.h>
+	"syntax.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\bitstream.h
+	"intmath.h"
+	"bitstream_types.h"
+	"syntax_types.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\decode_slice.h
+	"decode.h"
+	"bitstream_types.h"
+	<inttypes.h>
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\system.h
+	"decode.h"
+	"syntax_types.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\cabac.h
+	"intmath.h"
+	"decode.h"
+	"cabac_data.h"
+	"bitstream.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\cabac_data.h
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\decode_image.c
+	<string.h>
+	"common.h"
+	"decode.h"
+	"defaulttables.h"
+	"intmath.h"
+	"decode_slice.h"
+	"system.h"
+	"inverse_transforms.h"
+	"../image.h"
+	<math.h>
+	"ff.h"
+	"decode_image_intra.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\inverse_transforms.h
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\decode_image_intra.h
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\decode_slice.c
+	<string.h>
+	"syntax.h"
+	"bitstream.h"
+	"defaulttables.h"
+	"intmath.h"
+	"inverse_transforms.h"
+	"decode_slice.h"
+	"cabac.h"
+	<math.h>
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\defaulttables.c
+	"defaulttables.h"
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\filter_image.c
+	"common.h"
+	"decode.h"
+	"defaulttables.h"
+	"intmath.h"
+	"decode_slice.h"
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\intmath.c
+	<inttypes.h>
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\lud.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"ludh264.h"
+	"../image.h"
+	"lud.h"
+	"ff.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\ludh264.h
+	"decode.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\lud.h
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\ludh264.c
+	"ludh264.h"
+	"decode.h"
+	"system.h"
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\output.c
+	"decode.h"
+	"system.h"
+	"defaulttables.h"
+	<stdio.h>
+	<string.h>
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\syntax.c
+	<string.h>
+	"system.h"
+	"common.h"
+	"syntax.h"
+	"bitstream.h"
+	"defaulttables.h"
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\system.c
+	<inttypes.h>
+	<string.h>
+	"common.h"
+	"system.h"
+	"decode.h"
+	"defaulttables.h"
+
+1383617516 source:c:\users\sean\documents\github\snaps\imageprocessing\h264parser\avccparser.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"../image.h"
+	"commonparser.h"
+	"../image.h"
+	"avccparser.h"
+	"ff.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264parser\commonparser.h
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264parser\avccparser.h
+
+1383617704 source:c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"../image.h"
+	"iframeparser.h"
+	"ff.h"
+	"../image.h"
+
+1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.h
+
+1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	"H264Parser/iframeparser.h"
+	"H264Parser/avccparser.h"
+	"H264Decoder/lud.h"
+	"Encoder/bmp2jpg.h"
+	"ff.h"
+
+1383609790 source:c:\users\sean\documents\github\snaps\imageprocessing\populatearray.c
+	<stdio.h>
+	"populatearray.h"
+	"image.h"
+	"ff.h"
+
+1383609790 c:\users\sean\documents\github\snaps\imageprocessing\populatearray.h
+	"image.h"
+
+1383609790 source:c:\users\sean\documents\github\snaps\imageprocessing\sortimagearray.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+

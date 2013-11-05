@@ -42,17 +42,17 @@ int image_main(void)
     int images;
     iframearrayposition = avccparser(sps, pps, numberofframes); // 'Demux' Video, retrieve SPS, PPS, and Offset Data
     images = numberofframes[0]; // Set number of Iframes to Process
-    printf("Number of Frames %d \n",images);
+    printf("(image.c) Number of Frames %d \n",images);
 
     for(j=0;j<images;j++)
     {
         iframeparser(iframebuffer, j, iframearrayposition, iframelength); //Retrieve I-Frame NAL Unit
         lud(iframebuffer,iframelength, sps, pps,j); //Decode I-frame
         //edgedetect(j,total);
-        printf("Encoding Frame %i\n", j);
+        printf("(image.c) Encoding Frame %i\n", j);
         main_encoder(2,j); // Encode Image as JPEG
     }
-    printf(" \n\nFinal Count: %d ",total[0]);
+    printf(" \n\n(image.c) Final Count: %d ",total[0]);
     return (0);
 
 }

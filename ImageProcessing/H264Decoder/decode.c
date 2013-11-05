@@ -154,7 +154,7 @@ RetCode decode_nalu(uint8_t* data, uint32_t* length)
       r = parse_sps(&nalu, &sps);
       if (RET_SUCCESS != r)
       {
-        LUD_TRACE(TRACE_ERROR, "Error %d while parsing SPS, nalu dropped...\n", r);
+        LUD_TRACE(TRACE_ERROR, "(decode.c) Error %d while parsing SPS, nalu dropped...\n", r);
         break;
       }
       if (gdd.sps[sps->seq_parameter_set_id]!=0)
@@ -171,7 +171,7 @@ RetCode decode_nalu(uint8_t* data, uint32_t* length)
       r = parse_pps(&nalu, &pps);
       if (RET_SUCCESS != r)
       {
-        LUD_TRACE(TRACE_ERROR, "Error %d while parsing PPS, nalu dropped...\n", r);
+        LUD_TRACE(TRACE_ERROR, "(decode.c) Error %d while parsing PPS, nalu dropped...\n", r);
         break;
       }
       if (gdd.pps[pps->pic_parameter_set_id]!=0)
@@ -180,7 +180,7 @@ RetCode decode_nalu(uint8_t* data, uint32_t* length)
       break;
     }
     default:
-      LUD_TRACE(TRACE_INFO, "NALU type %d is unknown\n", nalu.nal_unit_type);
+      LUD_TRACE(TRACE_INFO, "(decode.c) NALU type %d is unknown\n", nalu.nal_unit_type);
       LUD_DEBUG_ASSERT(0); // Unknown NAL Unit type !
       break;
   }

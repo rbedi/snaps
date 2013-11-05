@@ -1,169 +1,189 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Release" />
-	<File name="Converter\fillpixelmatrix.c" open="0" top="0" tabpos="5">
-		<Cursor position="547" topLine="0" />
+	<File name="H264Decoder\system.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Encoder\ColorConversion.c" open="0" top="0" tabpos="6">
-		<Cursor position="255" topLine="0" />
+	<File name="Filters\andrewedges.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="652" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Encoder\bmp2jpg.c" open="0" top="0" tabpos="7">
-		<Cursor position="1025" topLine="35" />
+	<File name="Filters\circledetect.c" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Encoder\bmp2jpg.h" open="0" top="0" tabpos="0">
-		<Cursor position="142" topLine="0" />
+	<File name="H264Decoder\ludh264.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Encoder\dct.c" open="0" top="0" tabpos="8">
-		<Cursor position="230" topLine="3" />
+	<File name="H264Parser\avccparser.c" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="6992" topLine="220" />
+		</Cursor>
 	</File>
-	<File name="Encoder\ejpgl.h" open="0" top="0" tabpos="0">
-		<Cursor position="4216" topLine="75" />
+	<File name="Filters\circledetect.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Encoder\huffman.c" open="0" top="0" tabpos="9">
-		<Cursor position="14884" topLine="278" />
+	<File name="Encoder\bmp2jpg.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Encoder\huffman.h" open="0" top="0" tabpos="0">
-		<Cursor position="768" topLine="0" />
+	<File name="Filters\edgedetect.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="243" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Encoder\jpeg.c" open="0" top="0" tabpos="10">
-		<Cursor position="409" topLine="6" />
+	<File name="Filters\edgedetect.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Encoder\zzq.c" open="0" top="0" tabpos="11">
-		<Cursor position="500" topLine="8" />
+	<File name="Encoder\dct.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Filters\andrewedges.c" open="0" top="0" tabpos="4">
-		<Cursor position="2980" topLine="114" />
+	<File name="H264Parser\iframeparser.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Filters\circledetect.c" open="0" top="0" tabpos="12">
-		<Cursor position="446" topLine="9" />
+	<File name="Filters\fast-edge.c" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Filters\circledetect.h" open="0" top="0" tabpos="5">
-		<Cursor position="90" topLine="0" />
+	<File name="Filters\fast-edge.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Filters\edgedetect.c" open="1" top="1" tabpos="2">
-		<Cursor position="2567" topLine="63" />
+	<File name="Converter\fillpixelmatrix.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Filters\edgedetect.h" open="0" top="0" tabpos="1">
-		<Cursor position="72" topLine="0" />
+	<File name="Filters\histogram.c" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Filters\fast-edge.c" open="0" top="0" tabpos="13">
-		<Cursor position="2474" topLine="39" />
+	<File name="Encoder\ColorConversion.c" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Filters\fast-edge.h" open="0" top="0" tabpos="3">
-		<Cursor position="1349" topLine="20" />
+	<File name="image.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="991" topLine="16" />
+		</Cursor>
 	</File>
-	<File name="Filters\histogram.c" open="0" top="0" tabpos="14">
-		<Cursor position="4502" topLine="141" />
+	<File name="Filters\histogram.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Filters\histogram.h" open="0" top="0" tabpos="7">
-		<Cursor position="190" topLine="0" />
+	<File name="image.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Filters\imageio.c" open="0" top="0" tabpos="3">
-		<Cursor position="1249" topLine="20" />
+	<File name="Filters\imageio.c" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="Filters\imageio.h" open="0" top="0" tabpos="4">
-		<Cursor position="1238" topLine="8" />
+	<File name="populatearray.c" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\bitstream.c" open="0" top="0" tabpos="0">
-		<Cursor position="4177" topLine="90" />
+	<File name="Filters\imageio.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\bitstream.h" open="0" top="0" tabpos="8">
-		<Cursor position="8640" topLine="113" />
+	<File name="H264Decoder\bitstream.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\bitstream_types.h" open="0" top="0" tabpos="0">
-		<Cursor position="1860" topLine="28" />
+	<File name="H264Decoder\common.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2320" topLine="27" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\cabac.c" open="0" top="0" tabpos="0">
-		<Cursor position="1203" topLine="18" />
+	<File name="H264Decoder\decode.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4766" topLine="147" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\cabac.h" open="0" top="0" tabpos="0">
-		<Cursor position="19322" topLine="524" />
+	<File name="H264Decoder\decode.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\common.h" open="0" top="0" tabpos="0">
-		<Cursor position="2411" topLine="56" />
+	<File name="H264Decoder\decode_image.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\decode.c" open="0" top="0" tabpos="2">
-		<Cursor position="327" topLine="9" />
+	<File name="H264Decoder\decode_image_intra.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\decode.h" open="0" top="0" tabpos="4">
-		<Cursor position="9210" topLine="214" />
+	<File name="H264Decoder\decode_slice.c" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\decode_image.c" open="0" top="0" tabpos="2">
-		<Cursor position="12249" topLine="311" />
+	<File name="Encoder\huffman.c" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\decode_image_intra.h" open="0" top="0" tabpos="2">
-		<Cursor position="12317" topLine="323" />
+	<File name="H264Decoder\syntax.c" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="16373" topLine="415" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\decode_slice.c" open="0" top="0" tabpos="4">
-		<Cursor position="34365" topLine="754" />
+	<File name="Encoder\jpeg.c" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\decode_slice.h" open="0" top="0" tabpos="0">
-		<Cursor position="1621" topLine="15" />
+	<File name="H264Decoder\intmath.c" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\defaulttables.h" open="0" top="0" tabpos="0">
-		<Cursor position="1943" topLine="34" />
+	<File name="H264Decoder\intmath.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\filter_image.c" open="0" top="0" tabpos="0">
-		<Cursor position="20669" topLine="534" />
+	<File name="Encoder\zzq.c" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\intmath.c" open="0" top="0" tabpos="1">
-		<Cursor position="1360" topLine="0" />
+	<File name="H264Decoder\inverse_transforms.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
-	<File name="H264Decoder\intmath.h" open="0" top="0" tabpos="5">
-		<Cursor position="3365" topLine="77" />
-	</File>
-	<File name="H264Decoder\inverse_transforms.h" open="0" top="0" tabpos="3">
-		<Cursor position="6106" topLine="166" />
-	</File>
-	<File name="H264Decoder\lud.c" open="0" top="0" tabpos="5">
-		<Cursor position="2119" topLine="27" />
-	</File>
-	<File name="H264Decoder\ludh264.c" open="0" top="0" tabpos="1">
-		<Cursor position="1682" topLine="12" />
-	</File>
-	<File name="H264Decoder\ludh264.h" open="0" top="0" tabpos="0">
-		<Cursor position="1600" topLine="8" />
-	</File>
-	<File name="H264Decoder\output.c" open="0" top="0" tabpos="0">
-		<Cursor position="1940" topLine="33" />
-	</File>
-	<File name="H264Decoder\syntax.c" open="0" top="0" tabpos="8">
-		<Cursor position="2590" topLine="29" />
-	</File>
-	<File name="H264Decoder\syntax.h" open="0" top="0" tabpos="0">
-		<Cursor position="2366" topLine="30" />
-	</File>
-	<File name="H264Decoder\sysinfo.h" open="0" top="0" tabpos="0">
-		<Cursor position="1532" topLine="22" />
-	</File>
-	<File name="H264Decoder\system.c" open="0" top="0" tabpos="3">
-		<Cursor position="2557" topLine="62" />
-	</File>
-	<File name="H264Decoder\system.h" open="0" top="0" tabpos="0">
-		<Cursor position="1816" topLine="18" />
-	</File>
-	<File name="H264Parser\avccparser.c" open="0" top="0" tabpos="5">
-		<Cursor position="6788" topLine="226" />
-	</File>
-	<File name="H264Parser\commonparser.h" open="0" top="0" tabpos="0">
-		<Cursor position="576" topLine="0" />
-	</File>
-	<File name="H264Parser\iframeparser.c" open="0" top="0" tabpos="6">
-		<Cursor position="580" topLine="13" />
-	</File>
-	<File name="filemanager.h" open="0" top="0" tabpos="0">
-		<Cursor position="202" topLine="0" />
-	</File>
-	<File name="image.c" open="1" top="0" tabpos="1">
-		<Cursor position="1017" topLine="8" />
-	</File>
-	<File name="image.h" open="0" top="0" tabpos="4">
-		<Cursor position="457" topLine="3" />
-	</File>
-	<File name="populatearray.c" open="0" top="0" tabpos="7">
-		<Cursor position="882" topLine="25" />
-	</File>
-	<File name="sortimagearray.c" open="0" top="0" tabpos="0">
-		<Cursor position="415" topLine="0" />
+	<File name="H264Decoder\lud.c" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
