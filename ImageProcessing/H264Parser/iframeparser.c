@@ -24,7 +24,7 @@ void iframeparser(unsigned char* buffer, unsigned int j, unsigned int offsetarra
 	file = fm_open(file_name, readmode);
 	if (!file)
 	{
-		fprintf(stderr, "(iframeparser.c) Unable to open file: %s\n", "iframe");
+		fprintf(stderr, "(iframeparser.c) Unable to open file: %s\n", file_name);
 		return;
 	}
 

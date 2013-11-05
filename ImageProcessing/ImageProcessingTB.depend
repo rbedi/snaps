@@ -426,8 +426,13 @@
 	<stdlib.h>
 	"../image.h"
 	"fillpixelmatrix.h"
+<<<<<<< HEAD
 
 1383609789 c:\users\sean\documents\github\snaps\imageprocessing\image.h
+=======
+
+1383618280 c:\users\sean\documents\github\snaps\imageprocessing\image.h
+>>>>>>> 8463faf6c41aa03ecbd5f6904e8ada5deb858234
 	"filemanager.h"
 
 1383609789 c:\users\sean\documents\github\snaps\imageprocessing\filemanager.h
@@ -723,8 +728,13 @@
 	"system.h"
 	"decode.h"
 	"defaulttables.h"
+<<<<<<< HEAD
 
 1383617516 source:c:\users\sean\documents\github\snaps\imageprocessing\h264parser\avccparser.c
+=======
+
+1383618165 source:c:\users\sean\documents\github\snaps\imageprocessing\h264parser\avccparser.c
+>>>>>>> 8463faf6c41aa03ecbd5f6904e8ada5deb858234
 	<stdio.h>
 	<stdlib.h>
 	<stdint.h>
@@ -737,8 +747,13 @@
 1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264parser\commonparser.h
 
 1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264parser\avccparser.h
+<<<<<<< HEAD
 
 1383617704 source:c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.c
+=======
+
+1383618228 source:c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.c
+>>>>>>> 8463faf6c41aa03ecbd5f6904e8ada5deb858234
 	<stdio.h>
 	<stdlib.h>
 	<stdint.h>
@@ -748,8 +763,13 @@
 	"../image.h"
 
 1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.h
+<<<<<<< HEAD
 
 1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
+=======
+
+1383617807 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
+>>>>>>> 8463faf6c41aa03ecbd5f6904e8ada5deb858234
 	<stdio.h>
 	<stdlib.h>
 	"image.h"
