@@ -14,7 +14,7 @@
 #define whitefiltergreen 170
 #define whitefilterthreshold 0.04
 #define circledetectmatrixsize 16
-#define file_name "HHD00002.MOV"
+#define file_name "HHD00017.MOV"
 
 //#define file_name "test.txt"
 

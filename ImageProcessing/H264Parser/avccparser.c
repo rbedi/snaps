@@ -237,7 +237,7 @@ int avccparser(unsigned char *sps, unsigned char *pps, unsigned int *numberoffra
 	file = fm_open(file_name, readmode);
 	if (!file)
 	{
-		fprintf(stderr, "(avccparser.c) Unable to open file: %s\n", "video");
+		fprintf(stderr, "(avccparser.c) Unable to open file: %s\n", file_name);
 		return 0;
 	}
 
