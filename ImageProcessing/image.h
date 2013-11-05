@@ -17,6 +17,7 @@
 #define file_name "HHD00002.MOV"
 
 //#define file_name "test.txt"
+// test comment
 
 #include "filemanager.h"
 
