@@ -15,7 +15,7 @@ void readpicture(unsigned char* buffy, int j)
 {
     unsigned char filename[50];
     FILE* reader;
-    sprintf(filename,"SatImages/%d.pgm",4);
+    sprintf(filename,"SatImages/%d.pgm",j);
     reader = fopen(filename,"rb");
     fseek(reader,56,SEEK_SET);
     fread(buffy,522240,1,reader);
@@ -37,7 +37,7 @@ int canny(int j)
 //********
 //Temp code, directly read image instead of pass in
 //Data is in pgm-grayscale file (check starter for test images)
-	u = 0;
+	u = 1;
 
 	if(u==1)
 	{
@@ -119,7 +119,7 @@ void savegreyscale(int q)
 
 //Start of analysis process.
 //called from main fn.
-//arg j: curren image
+//arg j: current image
 //arg total: number of corners detected in image
 int edgedetect(int j,unsigned int* total)
 {
@@ -132,6 +132,7 @@ int edgedetect(int j,unsigned int* total)
   int confirmed = 0;
   int confirmed2 = 0;
   int position = 0;
+  total[0] = 0;
 
   unsigned char rows[100];
   unsigned char cols[100];

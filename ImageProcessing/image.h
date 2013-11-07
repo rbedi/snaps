@@ -36,7 +36,7 @@
 typedef struct {
     unsigned int position;                       /* Position of Frame in Video      */
     unsigned int width,height;                   /* Width and height of Frame */
-    unsigned char framebits[544][960];  /* RGB Matrix    */
+    unsigned char framebits[544][960];           /* RGB Matrix    */
 } FRAMECHAR;
 
 typedef struct
