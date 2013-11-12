@@ -43,9 +43,10 @@
 
 short g[WIDTH  * HEIGHT];
 unsigned char dir[WIDTH  * HEIGHT] = {0};
-unsigned char img_scratch_data[WIDTH  * HEIGHT] = {0};
+//unsigned char img_scratch_data[WIDTH  * HEIGHT] = {0};
 
 void canny_edge_detect(struct image * img_in, struct image * img_out) {
+    unsigned char *img_scratch_data = malloc(WIDTH * HEIGHT);
 	struct image img_scratch;
 	int high, low;
 	img_scratch.width = img_in->width;
@@ -56,6 +57,7 @@ void canny_edge_detect(struct image * img_in, struct image * img_out) {
 	non_max_suppression(&img_scratch, g, dir);
 	estimate_threshold(&img_scratch, &high, &low);
 	hysteresis(high, low, &img_scratch, img_out);
+	free(img_scratch_data);
 
 }
 
