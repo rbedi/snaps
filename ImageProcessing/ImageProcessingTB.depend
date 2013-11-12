@@ -550,8 +550,13 @@
 
 1383609788 c:\users\sean\documents\github\snaps\imageprocessing\filters\circledetect.h
 	"../image.h"
+<<<<<<< HEAD
 
 1383620879 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\edgedetect.c
+=======
+
+1384217328 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\edgedetect.c
+>>>>>>> c4eb47e73d3aae55cf35f06912e9d84717247674
 	<stdio.h>
 	<math.h>
 	<stdlib.h>
@@ -759,8 +764,13 @@
 1383618228 source:c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.c
 
 1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.h
+<<<<<<< HEAD
 
 1384214270 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
+=======
+
+1384216504 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
+>>>>>>> c4eb47e73d3aae55cf35f06912e9d84717247674
 	<stdio.h>
 	<stdlib.h>
 	"image.h"

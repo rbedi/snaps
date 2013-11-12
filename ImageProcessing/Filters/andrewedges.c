@@ -7,7 +7,6 @@ void cornerdetect(unsigned char* buffer, int col2, int row2,unsigned char* numbe
 {
     unsigned char currarray2[32][32];
     unsigned int maxvalues[16];
-    int i = 0;
     int row = 0;
     int col = 0;
     int k2 = 0;
