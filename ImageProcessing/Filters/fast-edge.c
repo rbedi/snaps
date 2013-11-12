@@ -60,10 +60,10 @@ void canny_edge_detect(struct image * img_in, struct image * img_out) {
 }
 
 static inline short g_func(short x, short y, struct image * img) {
-    w = img->width;
-	h = img->height;
-	max_x = w - 3;
-	max_y = w * (h - 3);
+    int w = img->width;
+	int h = img->height;
+	int max_x = w - 3;
+	int max_y = w * (h - 3);
     if (x <3 || y < w*3 || x >= max_x || y >= max_y) {
         return 0;
     }
