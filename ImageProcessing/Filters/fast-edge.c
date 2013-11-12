@@ -43,10 +43,10 @@
 
 short g[WIDTH  * HEIGHT];
 unsigned char dir[WIDTH  * HEIGHT] = {0};
-unsigned char img_scratch_data[WIDTH  * HEIGHT] = {0};
 
 void canny_edge_detect(struct image * img_in, struct image * img_out) {
     //unsigned char *img_scratch_data = malloc(WIDTH * HEIGHT); //malloc can't run on the ARM
+    unsigned char img_scratch_data[WIDTH  * HEIGHT] = {0}; // local now instead of global
 	struct image img_scratch;
 	int high, low;
 	img_scratch.width = img_in->width;
