@@ -31,23 +31,23 @@ int canny(int j)
 {
 
 	int w, h, i,u;
-    unsigned char yo[522240];
+    //unsigned char yo[522240];
     //yo: array to store hard coded image (temp)
 
 //********
 //Temp code, directly read image instead of pass in
 //Data is in pgm-grayscale file (check starter for test images)
-	u = 1;
-
-	if(u==1)
-	{
-        readpicture(yo,j);
-        img.pixel_data = yo;
-	}
-	else
-	{
-       //img.pixel_data =  CurrentFrame.framebits;
-	}
+	//u = 0;
+//
+//	if(u==1)
+//	{
+//        readpicture(yo,j);
+ //       img.pixel_data = yo;
+//	}
+//	else
+//	{
+       img.pixel_data =  CurrentFrame.framebits;
+//	}
 
 //***********
 

@@ -33,7 +33,7 @@
 #define min(a, b) ((a)<(b) ? (a) : (b))
 #define max(a, b) ((a)>(b) ? (a) : (b))
 
-//#define BENCHMARK
+//#define BENCHMARKgit stash save --keep-index
 
 
 int lud(unsigned char* streamBuffer, unsigned int *iframelength, unsigned char *spsbuffer, unsigned char *ppsbuffer, int j)

@@ -427,7 +427,7 @@
 
 1383609789 D
 
-1383620809 c:\users\sean\documents\github\snaps\imageprocessing\image.h
+1384214270 c:\users\sean\documents\github\snaps\imageprocessing\image.h
 	"filemanager.h"
 
 1383617807 3faf6c41aa03ecbd5f6904e8ada5deb858234
@@ -612,7 +612,7 @@
 1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\cabac.c
 	<stdint.h>
 
-1383617704 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\decode.c
+1383621121 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\decode.c
 	"syntax.h"
 	"decode.h"
 	<string.h>
@@ -707,7 +707,7 @@
 1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\intmath.c
 	<inttypes.h>
 
-1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\lud.c
+1384215704 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\lud.c
 	<stdlib.h>
 	<stdio.h>
 	<math.h>
@@ -760,7 +760,15 @@
 
 1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.h
 
-1383617807 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
+1384214270 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	"H264Parser/iframeparser.h"
+	"H264Parser/avccparser.h"
+	"H264Decoder/lud.h"
+	"Encoder/bmp2jpg.h"
+	"ff.h"
 
 1383609790 source:c:\users\sean\documents\github\snaps\imageprocessing\populatearray.c
 	<stdio.h>
