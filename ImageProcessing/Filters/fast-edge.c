@@ -41,7 +41,8 @@
 	If WIDTH and HEIGHT are defined, the arrays will be allocated in the compiler directive that follows:
 */
 
-short g[WIDTH  * HEIGHT], dir[WIDTH  * HEIGHT] = {0};
+short g[WIDTH  * HEIGHT];
+unsigned char dir[WIDTH  * HEIGHT] = {0};
 unsigned char img_scratch_data[WIDTH  * HEIGHT] = {0};
 
 void canny_edge_detect(struct image * img_in, struct image * img_out) {
@@ -109,7 +110,7 @@ void gaussian_noise_reduce(struct image * img_in, struct image * img_out)
 	calculates the result of the Sobel operator - http://en.wikipedia.org/wiki/Sobel_operator - and estimates edge direction angle
 */
 /*void calc_gradient_sobel(struct image * img_in, int g_x[], int g_y[], int g[], int dir[]) {//float theta[]) {*/
-void calc_gradient_sobel(struct image * img_in, short g[], short dir[]) {
+void calc_gradient_sobel(struct image * img_in, short g[], unsigned char dir[]) {
 
 	int w, h, x, y, max_x, max_y, g_x, g_y;
 	float g_div;
@@ -175,7 +176,7 @@ void calc_gradient_sobel(struct image * img_in, short g[], short dir[]) {
 	calculates the result of the Scharr version of the Sobel operator - http://en.wikipedia.org/wiki/Sobel_operator - and estimates edge direction angle
 	may have better rotational symmetry
 */
-void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], short g[], short dir[]) {//float theta[]) {
+void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], short g[], unsigned char dir[]) {//float theta[]) {
 
 	int w, h, x, y, max_x, max_y, n;
 	float g_div;
@@ -243,7 +244,7 @@ void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], short
 	if the rounded edge direction angle is 90 degrees, checks the east and west directions
 	if the rounded edge direction angle is 135 degrees, checks the northeast and southwest directions
 */
-void non_max_suppression(struct image * img, short g[], short dir[]) {//float theta[]) {
+void non_max_suppression(struct image * img, short g[], unsigned char dir[]) {//float theta[]) {
 
 	int w, h, x, y, max_x, max_y;
 	w = img->width;
