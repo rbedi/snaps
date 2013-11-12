@@ -64,10 +64,12 @@ static inline short g_func(short x, short y, struct image * img) {
 	int h = img->height;
 	int max_x = w - 3;
 	int max_y = w * (h - 3);
+	int g_x;
+	int g_y;
     if (x <3 || y < w*3 || x >= max_x || y >= max_y) {
         return 0;
     }
-    g_x = (2 * img_in->pixel_data[x + y + 1]
+    g_x = (2 * img->pixel_data[x + y + 1]
 				+ img->pixel_data[x + y - w + 1]
 				+ img->pixel_data[x + y + w + 1]
 				- 2 * img->pixel_data[x + y - 1]

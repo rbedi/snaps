@@ -550,13 +550,12 @@
 
 1383609788 c:\users\sean\documents\github\snaps\imageprocessing\filters\circledetect.h
 	"../image.h"
-<<<<<<< HEAD
 
-1383620879 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\edgedetect.c
-=======
+1383609789 D
 
 1384217328 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\edgedetect.c
->>>>>>> c4eb47e73d3aae55cf35f06912e9d84717247674
+
+1384216504 b47e73d3aae55cf35f06912e9d84717247674
 	<stdio.h>
 	<math.h>
 	<stdlib.h>
@@ -565,6 +564,14 @@
 	<string.h>
 	"imageio.h"
 	"fast-edge.h"
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	"H264Parser/iframeparser.h"
+	"H264Parser/avccparser.h"
+	"H264Decoder/lud.h"
+	"Encoder/bmp2jpg.h"
+	"ff.h"
 
 1383609788 c:\users\sean\documents\github\snaps\imageprocessing\filters\edgedetect.h
 	"../image.h"
@@ -764,21 +771,8 @@
 1383618228 source:c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.c
 
 1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.h
-<<<<<<< HEAD
-
-1384214270 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
-=======
 
 1384216504 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
->>>>>>> c4eb47e73d3aae55cf35f06912e9d84717247674
-	<stdio.h>
-	<stdlib.h>
-	"image.h"
-	"H264Parser/iframeparser.h"
-	"H264Parser/avccparser.h"
-	"H264Decoder/lud.h"
-	"Encoder/bmp2jpg.h"
-	"ff.h"
 
 1383609790 source:c:\users\sean\documents\github\snaps\imageprocessing\populatearray.c
 	<stdio.h>
@@ -1589,7 +1583,7 @@
 	"filemanager.h"
 	"ff.h"
 
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/andrewedges.c
+1384220426 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/andrewedges.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -1613,7 +1607,7 @@
 
 1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/imageio.h
 
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/fast-edge.h
+1384222033 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/fast-edge.h
 
 1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/histogram.c
 	<stdio.h>
