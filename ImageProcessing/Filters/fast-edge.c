@@ -59,6 +59,29 @@ void canny_edge_detect(struct image * img_in, struct image * img_out) {
 
 }
 
+static inline short g_func(short x, short y, struct image * img) {
+    w = img->width;
+	h = img->height;
+	max_x = w - 3;
+	max_y = w * (h - 3);
+    if (x <3 || y < w*3 || x >= max_x || y >= max_y) {
+        return 0;
+    }
+    g_x = (2 * img_in->pixel_data[x + y + 1]
+				+ img->pixel_data[x + y - w + 1]
+				+ img->pixel_data[x + y + w + 1]
+				- 2 * img->pixel_data[x + y - 1]
+				- img->pixel_data[x + y - w - 1]
+				- img->pixel_data[x + y + w - 1]);
+    g_y = 2 * img->pixel_data[x + y - w]
+				+ img->pixel_data[x + y - w + 1]
+				+ img->pixel_data[x + y - w - 1]
+				- 2 * img->pixel_data[x + y + w]
+				- img->pixel_data[x + y + w + 1]
+				- img->pixel_data[x + y + w - 1];
+	return sqrt(g_x * g_x + g_y * g_y);
+}
+
 /*
 	GAUSSIAN_NOISE_ REDUCE
 	apply 5x5 Gaussian convolution filter, shrinks the image by 4 pixels in each direction, using Gaussian filter found here:

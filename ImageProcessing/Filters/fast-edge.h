@@ -46,6 +46,8 @@ void gaussian_noise_reduce(struct image * img_in, struct image * img_out);
 void calc_gradient_sobel(struct image * img_in, short g[], unsigned char dir[]);
 void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], short g[], unsigned char dir[]);
 void non_max_suppression(struct image * img, short g[], unsigned char dir[]);
+static inline short g_func(short x, short y, struct image * img);
+
 
 void estimate_threshold(struct image * img, int * high, int * low);
 void hysteresis (int high, int low, struct image * img_in, struct image * img_out);
