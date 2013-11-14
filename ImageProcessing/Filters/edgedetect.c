@@ -63,15 +63,16 @@ int canny(int j)
 
     //death to malloc! (try to recycle memory)
     //idea- can we overwrite pass in image instead of creating brand new one?
-    unsigned char *img_gauss_data = malloc(w * h * sizeof(char));
-    img_gauss.pixel_data = img_gauss_data;
+    //unsigned char *img_gauss_data = malloc(w * h * sizeof(char));
+    //img_gauss.pixel_data = img_gauss_data;
+
     //vvvprep stuff fpr edge filter, borrowed code (look up ourselves)
-    gaussian_noise_reduce(&img, &img_gauss);
+    gaussian_noise_reduce(&img);
     //printf("*** performing morphological closing ***\n");
     //morph_close(&img, &img_scratch, &img_scratch2, &img_gauss);
-    canny_edge_detect(&img_gauss, &img); //actual Canny alg, again borrowed code
+    canny_edge_detect(&img); //actual Canny alg, again borrowed code
     write_pgm_image(&img,j); //for debugging output, saves output as pgm
-    free(img_gauss_data);
+    //free(img_gauss_data);
 	return(1);
 }
 

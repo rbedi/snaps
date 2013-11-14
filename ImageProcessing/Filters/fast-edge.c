@@ -44,7 +44,7 @@
 short g[WIDTH  * HEIGHT];
 unsigned char dir[WIDTH  * HEIGHT] = {0};
 
-void canny_edge_detect(struct image * img_in, struct image * img_out) {
+void canny_edge_detect(struct image * img_in) {
     //unsigned char *img_scratch_data = malloc(WIDTH * HEIGHT); //malloc can't run on the ARM
     unsigned char img_scratch_data[WIDTH  * HEIGHT] = {0}; // local now instead of global
 	struct image img_scratch;
@@ -56,7 +56,7 @@ void canny_edge_detect(struct image * img_in, struct image * img_out) {
 	printf("*** performing non-maximum suppression ***\n");
 	non_max_suppression(&img_scratch, g, dir);
 	estimate_threshold(&img_scratch, &high, &low);
-	hysteresis(high, low, &img_scratch, img_out);
+	hysteresis(high, low, &img_scratch, img_in);
 	//free(img_scratch_data);
 
 }
@@ -91,18 +91,29 @@ static inline short g_func(short x, short y, struct image * img) {
 	apply 5x5 Gaussian convolution filter, shrinks the image by 4 pixels in each direction, using Gaussian filter found here:
 	http://en.wikipedia.org/wiki/Canny_edge_detector
 */
-void gaussian_noise_reduce(struct image * img_in, struct image * img_out)
+void gaussian_noise_reduce(struct image * img_in)
 {
-	int w, h, x, y, max_x, max_y;
+
+	int i, w, h, x, y, max_x, max_y, new_px;
 	w = img_in->width;
 	h = img_in->height;
-	img_out->width = w;
-	img_out->height = h;
+
+    unsigned char img_scratch_data[WIDTH  * HEIGHT] = {0}; // local now instead of global
+	struct image img_scratch;
+	img_scratch.width = w;
+	img_scratch.height = h;
+	img_scratch.pixel_data = img_scratch_data;
+
+    for (i=0; i < (w*h); i++){
+        img_scratch.pixel_data[i] = img_in->pixel_data[i];
+    }
+
 	max_x = w - 2;
 	max_y = w * (h - 2);
 	for (y = w * 2; y < max_y; y += w) {
 		for (x = 2; x < max_x; x++) {
-			img_out->pixel_data[x + y] = (2 * img_in->pixel_data[x + y - 2 - w - w] +
+
+            img_scratch.pixel_data[x + y] = (2 * img_in->pixel_data[x + y - 2 - w - w] +
 			4 * img_in->pixel_data[x + y - 1 - w - w] +
 			5 * img_in->pixel_data[x + y - w - w] +
 			4 * img_in->pixel_data[x + y + 1 - w - w] +
@@ -129,6 +140,11 @@ void gaussian_noise_reduce(struct image * img_in, struct image * img_out)
 			2 * img_in->pixel_data[x + y + 2 + w + w]) / 159;
 		}
 	}
+
+    for (i=0; i < (w*h); i++){
+        img_in->pixel_data[i] = img_scratch.pixel_data[i];
+    }
+
 
 }
 

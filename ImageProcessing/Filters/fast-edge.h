@@ -40,8 +40,8 @@
 //#define ABS_APPROX		// uncomment to use the absolute value approximation of sqrt(Gx ^ 2 + Gy ^2)
 //#define PRINT_HISTOGRAM	// uncomment to print the histogram used to estimate the threshold
 
-void canny_edge_detect(struct image * img_in, struct image * img_out);
-void gaussian_noise_reduce(struct image * img_in, struct image * img_out);
+void canny_edge_detect(struct image * img_in);
+void gaussian_noise_reduce(struct image * img_in);
 
 void calc_gradient_sobel(struct image * img_in, short g[], unsigned char dir[]);
 void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], short g[], unsigned char dir[]);
