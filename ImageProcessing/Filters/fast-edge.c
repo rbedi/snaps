@@ -41,7 +41,7 @@
 	If WIDTH and HEIGHT are defined, the arrays will be allocated in the compiler directive that follows:
 */
 
-short g[WIDTH  * HEIGHT];
+//short g[WIDTH  * HEIGHT];
 unsigned char dir[WIDTH  * HEIGHT] = {0};
 
 void canny_edge_detect(struct image * img_in) {
@@ -52,16 +52,16 @@ void canny_edge_detect(struct image * img_in) {
 	img_scratch.width = img_in->width;
 	img_scratch.height = img_in->height;
 	img_scratch.pixel_data = img_scratch_data;
-	calc_gradient_sobel(img_in, g, dir);
+	calc_gradient_sobel(img_in, /*g,*/ dir);
 	printf("*** performing non-maximum suppression ***\n");
-	non_max_suppression(&img_scratch, g, dir);
+	non_max_suppression(&img_scratch, img_in, /*g,*/ dir);
 	estimate_threshold(&img_scratch, &high, &low);
 	hysteresis(high, low, &img_scratch, img_in);
 	//free(img_scratch_data);
 
 }
 
-static inline short g_func(short x, short y, struct image * img) {
+static inline short g_func(int x, int y, struct image * img) {
     int w = img->width;
 	int h = img->height;
 	int max_x = w - 3;
@@ -153,7 +153,7 @@ void gaussian_noise_reduce(struct image * img_in)
 	calculates the result of the Sobel operator - http://en.wikipedia.org/wiki/Sobel_operator - and estimates edge direction angle
 */
 /*void calc_gradient_sobel(struct image * img_in, int g_x[], int g_y[], int g[], int dir[]) {//float theta[]) {*/
-void calc_gradient_sobel(struct image * img_in, short g[], unsigned char dir[]) {
+void calc_gradient_sobel(struct image * img_in, /*short g[],*/ unsigned char dir[]) {
 
 	int w, h, x, y, max_x, max_y, g_x, g_y;
 	float g_div;
@@ -176,7 +176,7 @@ void calc_gradient_sobel(struct image * img_in, short g[], unsigned char dir[]) 
 				- img_in->pixel_data[x + y + w + 1]
 				- img_in->pixel_data[x + y + w - 1];
 			#ifndef ABS_APPROX
-			g[x + y] = sqrt(g_x * g_x + g_y * g_y);
+			//g[x + y] = sqrt(g_x * g_x + g_y * g_y);
 			#endif
 			#ifdef ABS_APPROX
 			g[x + y] = abs(g_x[x + y]) + abs(g_y[x + y]);
@@ -219,6 +219,7 @@ void calc_gradient_sobel(struct image * img_in, short g[], unsigned char dir[]) 
 	calculates the result of the Scharr version of the Sobel operator - http://en.wikipedia.org/wiki/Sobel_operator - and estimates edge direction angle
 	may have better rotational symmetry
 */
+/*
 void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], short g[], unsigned char dir[]) {//float theta[]) {
 
 	int w, h, x, y, max_x, max_y, n;
@@ -279,6 +280,7 @@ void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], short
 	}
 
 }
+*/
 /*
 	NON_MAX_SUPPRESSION
 	using the estimates of the Gx and Gy image gradients and the edge direction angle determines whether the magnitude of the gradient assumes a local  maximum in the gradient direction
@@ -287,55 +289,73 @@ void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], short
 	if the rounded edge direction angle is 90 degrees, checks the east and west directions
 	if the rounded edge direction angle is 135 degrees, checks the northeast and southwest directions
 */
-void non_max_suppression(struct image * img, short g[], unsigned char dir[]) {//float theta[]) {
+void non_max_suppression(struct image * img, struct image * img_in, /*short g[],*/ unsigned char dir[]) {//float theta[]) {
 
 	int w, h, x, y, max_x, max_y;
+	short curr_g, next_g, last_g;
 	w = img->width;
 	h = img->height;
 	max_x = w;
 	max_y = w * h;
 	for (y = 0; y < max_y; y += w) {
 		for (x = 0; x < max_x; x++) {
+            curr_g = g_func(x, y, img_in);
 			switch (dir[x + y]) {
 				case 0:
-					if (g[x + y] > g[x + y - w] && g[x + y] > g[x + y + w]) {
-						if (g[x + y] > 255) {
+				    next_g = g_func(x, y + w, img_in);
+                    last_g = g_func(x, y - w, img_in);
+                    if(curr_g > next_g && curr_g > last_g){
+                        if(curr_g > 255){
+					//if (g[x + y] > g[x + y - w] && g[x + y] > g[x + y + w]) {
+					//	if (g[x + y] > 255) {
 						img->pixel_data[x + y] = 0xFF;
 						} else {
-							img->pixel_data[x + y] = g[x + y];
+							img->pixel_data[x + y] = curr_g;//g[x + y];
 						}
 					} else {
 						img->pixel_data[x + y] = 0x00;
 					}
 					break;
 				case 1:
-					if (g[x + y] > g[x + y - w - 1] && g[x + y] > g[x + y + w + 1]) {
-						if (g[x + y] > 255) {
+				    next_g = g_func(x, y + w + 1, img_in);
+                    last_g = g_func(x, y - w - 1, img_in);
+                    if(curr_g > next_g && curr_g > last_g){
+                        if(curr_g > 255){
+					//if (g[x + y] > g[x + y - w - 1] && g[x + y] > g[x + y + w + 1]) {
+					//	if (g[x + y] > 255) {
 						img->pixel_data[x + y] = 0xFF;
 						} else {
-							img->pixel_data[x + y] = g[x + y];
+							img->pixel_data[x + y] = curr_g;//g[x + y];
 						}
 					} else {
 						img->pixel_data[x + y] = 0x00;
 					}
 					break;
 				case 2:
-					if (g[x + y] > g[x + y - 1] && g[x + y] > g[x + y + 1]) {
-						if (g[x + y] > 255) {
+				    next_g = g_func(x, y + 1, img_in);
+                    last_g = g_func(x, y - 1, img_in);
+                    if(curr_g > next_g && curr_g > last_g){
+                        if(curr_g > 255){
+					//if (g[x + y] > g[x + y - 1] && g[x + y] > g[x + y + 1]) {
+					//	if (g[x + y] > 255) {
 						img->pixel_data[x + y] = 0xFF;
 						} else {
-							img->pixel_data[x + y] = g[x + y];
+							img->pixel_data[x + y] = curr_g;//g[x + y];
 						}
 					} else {
 						img->pixel_data[x + y] = 0x00;
 					}
 					break;
 				case 3:
-					if (g[x + y] > g[x + y - w + 1] && g[x + y] > g[x + y + w - 1]) {
-						if (g[x + y] > 255) {
+				    next_g = g_func(x, y + w -1, img_in);
+                    last_g = g_func(x, y - w + 1, img_in);
+                    if(curr_g > next_g && curr_g > last_g){
+                        if(curr_g > 255){
+					//if (g[x + y] > g[x + y - w + 1] && g[x + y] > g[x + y + w - 1]) {
+					//	if (g[x + y] > 255) {
 						img->pixel_data[x + y] = 0xFF;
 						} else {
-							img->pixel_data[x + y] = g[x + y];
+							img->pixel_data[x + y] = curr_g;//g[x + y];
 						}
 					} else {
 						img->pixel_data[x + y] = 0x00;
