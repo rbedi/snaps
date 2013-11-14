@@ -51,7 +51,7 @@ int image_main(void)
         edgedetect(j,total);
         printf("(image.c) Encoding Frame %i\n", j);
 
-        // Only encode JPEG images that have edges
+        // Only encode JPEG images that have corners
         if (total[0])
         {
             main_encoder(2,j);
