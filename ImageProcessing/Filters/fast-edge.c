@@ -98,7 +98,8 @@ void gaussian_noise_reduce(struct image * img_in)
 	w = img_in->width;
 	h = img_in->height;
 
-    unsigned char img_scratch_data[WIDTH  * HEIGHT] = {0}; // local now instead of global
+    //img_scratch_data: temporary image for computing gaussian_noise_reduce
+    unsigned char img_scratch_data[WIDTH  * HEIGHT] = {0};
 	struct image img_scratch;
 	img_scratch.width = w;
 	img_scratch.height = h;
@@ -140,6 +141,8 @@ void gaussian_noise_reduce(struct image * img_in)
 			2 * img_in->pixel_data[x + y + 2 + w + w]) / 159;
 		}
 	}
+
+    //write noise reduced values back to image from scratch
 
     for (i=0; i < (w*h); i++){
         img_in->pixel_data[i] = img_scratch.pixel_data[i];
