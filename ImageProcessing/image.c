@@ -50,7 +50,13 @@ int image_main(void)
         lud(iframebuffer,iframelength, sps, pps,j); //Decode I-frame into RGB image
         edgedetect(j,total);
         printf("(image.c) Encoding Frame %i\n", j);
-        main_encoder(2,j); // Encode Image as JPEG
+
+        // Only encode JPEG images that have edges
+        if (total[0])
+        {
+            main_encoder(2,j);
+        }
+
         printf(" \n\n(image.c) Final Count per Image: %d ",total[0]);
     }
     //printf(" \n\n(image.c) Final Count: %d ",total[0]);
