@@ -43,10 +43,10 @@
 void canny_edge_detect(struct image * img_in);
 void gaussian_noise_reduce(struct image * img_in);
 
-void calc_gradient_sobel(struct image * img_in, /*short g[],*/ unsigned char dir[]);
-void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], /*short g[],*/ unsigned char dir[]);
-void non_max_suppression(struct image * img, struct image* img_in,/* short g[],*/ unsigned char dir[]);
-static inline short g_func(int x, int y, struct image * img);
+//void calc_gradient_sobel(struct image * img_in, /*short g[],*/ unsigned char dir[]);
+//void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], /*short g[],*/ unsigned char dir[]);
+void non_max_suppression(struct image * img, struct image* img_in/*, short g[], unsigned char dir[]*/);
+static inline void g_func(int x, int y, struct image * img, short * g, unsigned char * dir);
 
 
 void estimate_threshold(struct image * img, int * high, int * low);

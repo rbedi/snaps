@@ -42,7 +42,7 @@
 */
 
 //short g[WIDTH  * HEIGHT];
-unsigned char dir[WIDTH  * HEIGHT] = {0};
+//unsigned char dir[WIDTH  * HEIGHT] = {0};
 
 void canny_edge_detect(struct image * img_in) {
     //unsigned char *img_scratch_data = malloc(WIDTH * HEIGHT); //malloc can't run on the ARM
@@ -52,22 +52,23 @@ void canny_edge_detect(struct image * img_in) {
 	img_scratch.width = img_in->width;
 	img_scratch.height = img_in->height;
 	img_scratch.pixel_data = img_scratch_data;
-	calc_gradient_sobel(img_in, /*g,*/ dir);
+	//calc_gradient_sobel(img_in, /*g,*/ dir);
 	printf("*** performing non-maximum suppression ***\n");
-	non_max_suppression(&img_scratch, img_in, /*g,*/ dir);
+	non_max_suppression(&img_scratch, img_in/*, g, dir*/);
 	estimate_threshold(&img_scratch, &high, &low);
 	hysteresis(high, low, &img_scratch, img_in);
 	//free(img_scratch_data);
 
 }
 
-static inline short g_func(int x, int y, struct image * img) {
+static inline void g_func(int x, int y, struct image * img, short * g, unsigned char * dir) {
     int w = img->width;
 	int h = img->height;
 	int max_x = w - 3;
 	int max_y = w * (h - 3);
 	int g_x;
 	int g_y;
+	float g_div;
     if (x <3 || y < w*3 || x >= max_x || y >= max_y) {
         return 0;
     }
@@ -83,7 +84,34 @@ static inline short g_func(int x, int y, struct image * img) {
 				- 2 * img->pixel_data[x + y + w]
 				- img->pixel_data[x + y + w + 1]
 				- img->pixel_data[x + y + w - 1];
-	return sqrt(g_x * g_x + g_y * g_y);
+	*g = sqrt(g_x * g_x + g_y * g_y);
+	if (g_x == 0) {
+        *dir = 2;
+    } else {
+		g_div = g_y / (float) g_x;
+
+		if (g_div < 0) {
+			if (g_div < -2.41421356237) {
+				*dir = 0;
+			} else {
+				if (g_div < -0.414213562373) {
+					*dir = 1;
+				} else {
+					*dir = 2;
+				}
+			}
+		} else {
+			if (g_div > 2.41421356237) {
+				*dir = 0;
+			} else {
+				if (g_div > 0.414213562373) {
+					*dir = 3;
+				} else {
+					*dir = 2;
+				}
+			}
+		}
+	}
 }
 
 /*
@@ -156,8 +184,8 @@ void gaussian_noise_reduce(struct image * img_in)
 	calculates the result of the Sobel operator - http://en.wikipedia.org/wiki/Sobel_operator - and estimates edge direction angle
 */
 /*void calc_gradient_sobel(struct image * img_in, int g_x[], int g_y[], int g[], int dir[]) {//float theta[]) {*/
-void calc_gradient_sobel(struct image * img_in, /*short g[],*/ unsigned char dir[]) {
-
+//void calc_gradient_sobel(struct image * img_in, /*short g[],*/ unsigned char dir[]) {
+/*
 	int w, h, x, y, max_x, max_y, g_x, g_y;
 	float g_div;
 	w = img_in->width;
@@ -215,7 +243,7 @@ void calc_gradient_sobel(struct image * img_in, /*short g[],*/ unsigned char dir
 
 	}
 
-}
+}*/
 
 /*
 	CALC_GRADIENT_SCHARR
@@ -292,21 +320,29 @@ void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], short
 	if the rounded edge direction angle is 90 degrees, checks the east and west directions
 	if the rounded edge direction angle is 135 degrees, checks the northeast and southwest directions
 */
-void non_max_suppression(struct image * img, struct image * img_in, /*short g[],*/ unsigned char dir[]) {//float theta[]) {
+void non_max_suppression(struct image * img, struct image * img_in/*, short g[], unsigned char dir[]*/) {//float theta[]) {
 
 	int w, h, x, y, max_x, max_y;
 	short curr_g, next_g, last_g;
+	unsigned char direction;
+	unsigned char temp = 5; // invalid direction, tells g_func to skip direction calculation
 	w = img->width;
 	h = img->height;
 	max_x = w;
 	max_y = w * h;
 	for (y = 0; y < max_y; y += w) {
 		for (x = 0; x < max_x; x++) {
-            curr_g = g_func(x, y, img_in);
-			switch (dir[x + y]) {
+            direction = 0;
+            g_func(x, y, img_in, &curr_g, &direction);
+            //if (direction != dir[x+y]) {
+            //    printf("[%d %d] func value %d does not match actual %d\n",x,y,direction, dir[x+y]);
+            //}
+            //curr_dir= d_func()
+            //printf("%d\n", direction);
+			switch (direction) {
 				case 0:
-				    next_g = g_func(x, y + w, img_in);
-                    last_g = g_func(x, y - w, img_in);
+				    g_func(x, y + w, img_in, &next_g, &temp);
+                    g_func(x, y - w, img_in, &last_g, &temp);
                     if(curr_g > next_g && curr_g > last_g){
                         if(curr_g > 255){
 					//if (g[x + y] > g[x + y - w] && g[x + y] > g[x + y + w]) {
@@ -320,8 +356,8 @@ void non_max_suppression(struct image * img, struct image * img_in, /*short g[],
 					}
 					break;
 				case 1:
-				    next_g = g_func(x, y + w + 1, img_in);
-                    last_g = g_func(x, y - w - 1, img_in);
+				    g_func(x, y + w + 1, img_in, &next_g, &temp);
+                    g_func(x, y - w - 1, img_in, &last_g, &temp);
                     if(curr_g > next_g && curr_g > last_g){
                         if(curr_g > 255){
 					//if (g[x + y] > g[x + y - w - 1] && g[x + y] > g[x + y + w + 1]) {
@@ -335,8 +371,8 @@ void non_max_suppression(struct image * img, struct image * img_in, /*short g[],
 					}
 					break;
 				case 2:
-				    next_g = g_func(x, y + 1, img_in);
-                    last_g = g_func(x, y - 1, img_in);
+				    g_func(x, y + 1, img_in, &next_g, &temp);
+                    g_func(x, y - 1, img_in, &last_g, &temp);
                     if(curr_g > next_g && curr_g > last_g){
                         if(curr_g > 255){
 					//if (g[x + y] > g[x + y - 1] && g[x + y] > g[x + y + 1]) {
@@ -350,8 +386,8 @@ void non_max_suppression(struct image * img, struct image * img_in, /*short g[],
 					}
 					break;
 				case 3:
-				    next_g = g_func(x, y + w -1, img_in);
-                    last_g = g_func(x, y - w + 1, img_in);
+				    g_func(x, y + w -1, img_in, &next_g, &temp);
+                    g_func(x, y - w + 1, img_in, &last_g, &temp);
                     if(curr_g > next_g && curr_g > last_g){
                         if(curr_g > 255){
 					//if (g[x + y] > g[x + y - w + 1] && g[x + y] > g[x + y + w - 1]) {

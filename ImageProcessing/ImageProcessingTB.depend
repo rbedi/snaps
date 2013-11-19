@@ -538,7 +538,7 @@
 	"filemanager.h"
 	"ff.h"
 
-1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\andrewedges.c
+1384218530 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\andrewedges.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -551,9 +551,15 @@
 1383609788 c:\users\sean\documents\github\snaps\imageprocessing\filters\circledetect.h
 	"../image.h"
 
-1383609789 D
-
-1384217328 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\edgedetect.c
+1384396010 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\edgedetect.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	"../image.h"
+	"edgedetect.h"
+	<string.h>
+	"imageio.h"
+	"fast-edge.h"
 
 1384216504 b47e73d3aae55cf35f06912e9d84717247674
 	<stdio.h>
@@ -578,7 +584,7 @@
 
 1383609788 c:\users\sean\documents\github\snaps\imageprocessing\filters\imageio.h
 
-1383609788 c:\users\sean\documents\github\snaps\imageprocessing\filters\fast-edge.h
+1384822350 c:\users\sean\documents\github\snaps\imageprocessing\filters\fast-edge.h
 
 1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\fast-edge.c
 	<stdio.h>
@@ -719,7 +725,7 @@
 1383609789 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\intmath.c
 	<inttypes.h>
 
-1384215704 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\lud.c
+1384397580 source:c:\users\sean\documents\github\snaps\imageprocessing\h264decoder\lud.c
 	<stdlib.h>
 	<stdio.h>
 	<math.h>
@@ -772,7 +778,15 @@
 
 1383609789 c:\users\sean\documents\github\snaps\imageprocessing\h264parser\iframeparser.h
 
-1384216504 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
+1384397340 source:c:\users\sean\documents\github\snaps\imageprocessing\image.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	"H264Parser/iframeparser.h"
+	"H264Parser/avccparser.h"
+	"H264Decoder/lud.h"
+	"Encoder/bmp2jpg.h"
+	"ff.h"
 
 1383609790 source:c:\users\sean\documents\github\snaps\imageprocessing\populatearray.c
 	<stdio.h>
@@ -1145,354 +1159,6 @@
 	<stdlib.h>
 	"../image.h"
 	"fillpixelmatrix.h"
-
-1383789512 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/image.h
-	"filemanager.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/filemanager.h
-	<stdio.h>
-	<stdlib.h>
-	<stdint.h>
-	"ff.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Converter/fillpixelmatrix.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/bmp2jpg.c
-	<stdio.h>
-	<stdlib.h>
-	<math.h>
-	<string.h>
-	"ejpgl.h"
-	"bmp2jpg.h"
-	"ColorConversion.h"
-	"dct.h"
-	"huffman.h"
-	"jpeg.h"
-	"zzq.h"
-	"../image.h"
-	"../Converter/fillpixelmatrix.h"
-	"ff.h"
-	"../image.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/ejpgl.h
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/bmp2jpg.h
-	"ejpgl.h"
-	"../image.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/ColorConversion.h
-	"ejpgl.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/dct.h
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/huffman.h
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/jpeg.h
-	"ejpgl.h"
-	"../image.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/zzq.h
-	"ejpgl.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/ColorConversion.c
-	"ejpgl.h"
-	"ColorConversion.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/dct.c
-	<stdio.h>
-	<stdlib.h>
-	"ejpgl.h"
-	"dct.h"
-	"zzq.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/huffman.c
-	<stdio.h>
-	<stdlib.h>
-	"ejpgl.h"
-	"huffman.h"
-	<string.h>
-	"bmp2jpg.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/jpeg.c
-	<stdio.h>
-	<stdlib.h>
-	"ejpgl.h"
-	"../image.h"
-	"jpeg.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/zzq.c
-	<stdio.h>
-	<stdlib.h>
-	"ejpgl.h"
-	"zzq.h"
-	"huffman.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/filemanager.c
-	"filemanager.h"
-	"ff.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/andrewedges.c
-	<stdio.h>
-	<stdlib.h>
-	<math.h>
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/circledetect.c
-	"../image.h"
-	<math.h>
-	"circledetect.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/circledetect.h
-	"../image.h"
-
-1383790125 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/edgedetect.c
-	<stdio.h>
-	<math.h>
-	<stdlib.h>
-	"../image.h"
-	"edgedetect.h"
-	<string.h>
-	"imageio.h"
-	"fast-edge.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/edgedetect.h
-	"../image.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/imageio.h
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/fast-edge.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/fast-edge.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<math.h>
-	<time.h>
-	"imageio.h"
-	"fast-edge.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/histogram.c
-	<stdio.h>
-	<stdlib.h>
-	<math.h>
-	"../image.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/imageio.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<math.h>
-	<time.h>
-	"imageio.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/bitstream.c
-	<inttypes.h>
-	"bitstream_types.h"
-	"intmath.h"
-	<string.h>
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/bitstream_types.h
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/intmath.h
-	<inttypes.h>
-	"common.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/common.h
-	<assert.h>
-	<stdlib.h>
-	<stdio.h>
-	<inttypes.h>
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/cabac.c
-	<stdint.h>
-
-1383621325 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode.c
-	"syntax.h"
-	"decode.h"
-	<string.h>
-	"defaulttables.h"
-	"bitstream.h"
-	"decode_slice.h"
-	"system.h"
-	"cabac.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/syntax.h
-	"syntax_types.h"
-	"bitstream_types.h"
-	"decode.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/syntax_types.h
-	<inttypes.h>
-	"common.h"
-	"bitstream_types.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode.h
-	"common.h"
-	"syntax.h"
-	"bitstream_types.h"
-	"../image.h"
-	"ff.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/defaulttables.h
-	<inttypes.h>
-	"syntax.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/bitstream.h
-	"intmath.h"
-	"bitstream_types.h"
-	"syntax_types.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_slice.h
-	"decode.h"
-	"bitstream_types.h"
-	<inttypes.h>
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/system.h
-	"decode.h"
-	"syntax_types.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/cabac.h
-	"intmath.h"
-	"decode.h"
-	"cabac_data.h"
-	"bitstream.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/cabac_data.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_image.c
-	<string.h>
-	"common.h"
-	"decode.h"
-	"defaulttables.h"
-	"intmath.h"
-	"decode_slice.h"
-	"system.h"
-	"inverse_transforms.h"
-	"../image.h"
-	<math.h>
-	"ff.h"
-	"decode_image_intra.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/inverse_transforms.h
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_image_intra.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_slice.c
-	<string.h>
-	"syntax.h"
-	"bitstream.h"
-	"defaulttables.h"
-	"intmath.h"
-	"inverse_transforms.h"
-	"decode_slice.h"
-	"cabac.h"
-	<math.h>
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/defaulttables.c
-	"defaulttables.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/filter_image.c
-	"common.h"
-	"decode.h"
-	"defaulttables.h"
-	"intmath.h"
-	"decode_slice.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/intmath.c
-	<inttypes.h>
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/lud.c
-	<stdlib.h>
-	<stdio.h>
-	<math.h>
-	<string.h>
-	"ludh264.h"
-	"../image.h"
-	"lud.h"
-	"ff.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/ludh264.h
-	"decode.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/lud.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/ludh264.c
-	"ludh264.h"
-	"decode.h"
-	"system.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/output.c
-	"decode.h"
-	"system.h"
-	"defaulttables.h"
-	<stdio.h>
-	<string.h>
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/syntax.c
-	<string.h>
-	"system.h"
-	"common.h"
-	"syntax.h"
-	"bitstream.h"
-	"defaulttables.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/system.c
-	<inttypes.h>
-	<string.h>
-	"common.h"
-	"system.h"
-	"decode.h"
-	"defaulttables.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/avccparser.c
-	<stdio.h>
-	<stdlib.h>
-	<stdint.h>
-	"../image.h"
-	"commonparser.h"
-	"../image.h"
-	"avccparser.h"
-	"ff.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/commonparser.h
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/avccparser.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/iframeparser.c
-	<stdio.h>
-	<stdlib.h>
-	<stdint.h>
-	"../image.h"
-	"iframeparser.h"
-	"ff.h"
-	"../image.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/iframeparser.h
-
-1383791186 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/image.c
-	<stdio.h>
-	<stdlib.h>
-	"image.h"
-	"H264Parser/iframeparser.h"
-	"H264Parser/avccparser.h"
-	"H264Decoder/lud.h"
-	"Encoder/bmp2jpg.h"
-	"ff.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/populatearray.c
-	<stdio.h>
-	"populatearray.h"
-	"image.h"
-	"ff.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/populatearray.h
-	"image.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/sortimagearray.c
-	<stdio.h>
-	<stdlib.h>
-	"image.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Converter/fillpixelmatrix.c
 	<stdio.h>
 	<stdlib.h>
 	"../image.h"
@@ -1500,8 +1166,13 @@
 
 1383789512 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/image.h
 	"filemanager.h"
+	"filemanager.h"
 
 1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/filemanager.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"ff.h"
 	<stdio.h>
 	<stdlib.h>
 	<stdint.h>
@@ -1525,14 +1196,32 @@
 	"../Converter/fillpixelmatrix.h"
 	"ff.h"
 	"../image.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	"ejpgl.h"
+	"bmp2jpg.h"
+	"ColorConversion.h"
+	"dct.h"
+	"huffman.h"
+	"jpeg.h"
+	"zzq.h"
+	"../image.h"
+	"../Converter/fillpixelmatrix.h"
+	"ff.h"
+	"../image.h"
 
 1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/ejpgl.h
 
 1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/bmp2jpg.h
 	"ejpgl.h"
 	"../image.h"
+	"ejpgl.h"
+	"../image.h"
 
 1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/ColorConversion.h
+	"ejpgl.h"
 	"ejpgl.h"
 
 1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/dct.h
@@ -1542,15 +1231,25 @@
 1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/jpeg.h
 	"ejpgl.h"
 	"../image.h"
+	"ejpgl.h"
+	"../image.h"
 
 1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/zzq.h
+	"ejpgl.h"
 	"ejpgl.h"
 
 1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/ColorConversion.c
 	"ejpgl.h"
 	"ColorConversion.h"
+	"ejpgl.h"
+	"ColorConversion.h"
 
 1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/dct.c
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"dct.h"
+	"zzq.h"
 	<stdio.h>
 	<stdlib.h>
 	"ejpgl.h"
@@ -1564,8 +1263,19 @@
 	"huffman.h"
 	<string.h>
 	"bmp2jpg.h"
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"huffman.h"
+	<string.h>
+	"bmp2jpg.h"
 
 1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Encoder/jpeg.c
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"../image.h"
+	"jpeg.h"
 	<stdio.h>
 	<stdlib.h>
 	"ejpgl.h"
@@ -1578,12 +1288,22 @@
 	"ejpgl.h"
 	"zzq.h"
 	"huffman.h"
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"zzq.h"
+	"huffman.h"
 
 1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/filemanager.c
 	"filemanager.h"
 	"ff.h"
+	"filemanager.h"
+	"ff.h"
 
 1384220426 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/andrewedges.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -1592,234 +1312,13 @@
 	"../image.h"
 	<math.h>
 	"circledetect.h"
+	"../image.h"
+	<math.h>
+	"circledetect.h"
 
 1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/circledetect.h
 	"../image.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/fast-edge.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<math.h>
-	<time.h>
-	"imageio.h"
-	"fast-edge.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/imageio.h
-
-1384222033 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/fast-edge.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/histogram.c
-	<stdio.h>
-	<stdlib.h>
-	<math.h>
 	"../image.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/imageio.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<math.h>
-	<time.h>
-	"imageio.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/bitstream.c
-	<inttypes.h>
-	"bitstream_types.h"
-	"intmath.h"
-	<string.h>
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/bitstream_types.h
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/intmath.h
-	<inttypes.h>
-	"common.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/common.h
-	<assert.h>
-	<stdlib.h>
-	<stdio.h>
-	<inttypes.h>
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/cabac.c
-	<stdint.h>
-
-1383621325 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode.c
-	"syntax.h"
-	"decode.h"
-	<string.h>
-	"defaulttables.h"
-	"bitstream.h"
-	"decode_slice.h"
-	"system.h"
-	"cabac.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/syntax.h
-	"syntax_types.h"
-	"bitstream_types.h"
-	"decode.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/syntax_types.h
-	<inttypes.h>
-	"common.h"
-	"bitstream_types.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode.h
-	"common.h"
-	"syntax.h"
-	"bitstream_types.h"
-	"../image.h"
-	"ff.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/defaulttables.h
-	<inttypes.h>
-	"syntax.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/bitstream.h
-	"intmath.h"
-	"bitstream_types.h"
-	"syntax_types.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_slice.h
-	"decode.h"
-	"bitstream_types.h"
-	<inttypes.h>
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/system.h
-	"decode.h"
-	"syntax_types.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/cabac.h
-	"intmath.h"
-	"decode.h"
-	"cabac_data.h"
-	"bitstream.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/cabac_data.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_image.c
-	<string.h>
-	"common.h"
-	"decode.h"
-	"defaulttables.h"
-	"intmath.h"
-	"decode_slice.h"
-	"system.h"
-	"inverse_transforms.h"
-	"../image.h"
-	<math.h>
-	"ff.h"
-	"decode_image_intra.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/inverse_transforms.h
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_image_intra.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_slice.c
-	<string.h>
-	"syntax.h"
-	"bitstream.h"
-	"defaulttables.h"
-	"intmath.h"
-	"inverse_transforms.h"
-	"decode_slice.h"
-	"cabac.h"
-	<math.h>
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/defaulttables.c
-	"defaulttables.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/filter_image.c
-	"common.h"
-	"decode.h"
-	"defaulttables.h"
-	"intmath.h"
-	"decode_slice.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/intmath.c
-	<inttypes.h>
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/ludh264.c
-	"ludh264.h"
-	"decode.h"
-	"system.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/ludh264.h
-	"decode.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/output.c
-	"decode.h"
-	"system.h"
-	"defaulttables.h"
-	<stdio.h>
-	<string.h>
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/syntax.c
-	<string.h>
-	"system.h"
-	"common.h"
-	"syntax.h"
-	"bitstream.h"
-	"defaulttables.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/system.c
-	<inttypes.h>
-	<string.h>
-	"common.h"
-	"system.h"
-	"decode.h"
-	"defaulttables.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/avccparser.c
-	<stdio.h>
-	<stdlib.h>
-	<stdint.h>
-	"../image.h"
-	"commonparser.h"
-	"../image.h"
-	"avccparser.h"
-	"ff.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/commonparser.h
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/avccparser.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/iframeparser.c
-	<stdio.h>
-	<stdlib.h>
-	<stdint.h>
-	"../image.h"
-	"iframeparser.h"
-	"ff.h"
-	"../image.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/iframeparser.h
-
-1383791186 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/image.c
-	<stdio.h>
-	<stdlib.h>
-	"image.h"
-	"H264Parser/iframeparser.h"
-	"H264Parser/avccparser.h"
-	"H264Decoder/lud.h"
-	"Encoder/bmp2jpg.h"
-	"ff.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/lud.h
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/populatearray.c
-	<stdio.h>
-	"populatearray.h"
-	"image.h"
-	"ff.h"
-
-1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/populatearray.h
-	"image.h"
-
-1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/sortimagearray.c
-	<stdio.h>
-	<stdlib.h>
-	"image.h"
 
 1384216671 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/edgedetect.c
 	<stdio.h>
@@ -1830,9 +1329,250 @@
 	<string.h>
 	"imageio.h"
 	"fast-edge.h"
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	"../image.h"
+	"edgedetect.h"
+	<string.h>
+	"imageio.h"
+	"fast-edge.h"
 
 1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/edgedetect.h
 	"../image.h"
+	"../image.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/imageio.h
+
+1384222033 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/fast-edge.h
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/fast-edge.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"imageio.h"
+	"fast-edge.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"imageio.h"
+	"fast-edge.h"
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/histogram.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"../image.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"../image.h"
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/Filters/imageio.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"imageio.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"imageio.h"
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/bitstream.c
+	<inttypes.h>
+	"bitstream_types.h"
+	"intmath.h"
+	<string.h>
+	<inttypes.h>
+	"bitstream_types.h"
+	"intmath.h"
+	<string.h>
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/bitstream_types.h
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/intmath.h
+	<inttypes.h>
+	"common.h"
+	<inttypes.h>
+	"common.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/common.h
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+	<inttypes.h>
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+	<inttypes.h>
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/cabac.c
+	<stdint.h>
+	<stdint.h>
+
+1383621325 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode.c
+	"syntax.h"
+	"decode.h"
+	<string.h>
+	"defaulttables.h"
+	"bitstream.h"
+	"decode_slice.h"
+	"system.h"
+	"cabac.h"
+	"syntax.h"
+	"decode.h"
+	<string.h>
+	"defaulttables.h"
+	"bitstream.h"
+	"decode_slice.h"
+	"system.h"
+	"cabac.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/syntax.h
+	"syntax_types.h"
+	"bitstream_types.h"
+	"decode.h"
+	"syntax_types.h"
+	"bitstream_types.h"
+	"decode.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/syntax_types.h
+	<inttypes.h>
+	"common.h"
+	"bitstream_types.h"
+	<inttypes.h>
+	"common.h"
+	"bitstream_types.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode.h
+	"common.h"
+	"syntax.h"
+	"bitstream_types.h"
+	"../image.h"
+	"ff.h"
+	"common.h"
+	"syntax.h"
+	"bitstream_types.h"
+	"../image.h"
+	"ff.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/defaulttables.h
+	<inttypes.h>
+	"syntax.h"
+	<inttypes.h>
+	"syntax.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/bitstream.h
+	"intmath.h"
+	"bitstream_types.h"
+	"syntax_types.h"
+	"intmath.h"
+	"bitstream_types.h"
+	"syntax_types.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_slice.h
+	"decode.h"
+	"bitstream_types.h"
+	<inttypes.h>
+	"decode.h"
+	"bitstream_types.h"
+	<inttypes.h>
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/system.h
+	"decode.h"
+	"syntax_types.h"
+	"decode.h"
+	"syntax_types.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/cabac.h
+	"intmath.h"
+	"decode.h"
+	"cabac_data.h"
+	"bitstream.h"
+	"intmath.h"
+	"decode.h"
+	"cabac_data.h"
+	"bitstream.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/cabac_data.h
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_image.c
+	<string.h>
+	"common.h"
+	"decode.h"
+	"defaulttables.h"
+	"intmath.h"
+	"decode_slice.h"
+	"system.h"
+	"inverse_transforms.h"
+	"../image.h"
+	<math.h>
+	"ff.h"
+	"decode_image_intra.h"
+	<string.h>
+	"common.h"
+	"decode.h"
+	"defaulttables.h"
+	"intmath.h"
+	"decode_slice.h"
+	"system.h"
+	"inverse_transforms.h"
+	"../image.h"
+	<math.h>
+	"ff.h"
+	"decode_image_intra.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/inverse_transforms.h
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_image_intra.h
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/decode_slice.c
+	<string.h>
+	"syntax.h"
+	"bitstream.h"
+	"defaulttables.h"
+	"intmath.h"
+	"inverse_transforms.h"
+	"decode_slice.h"
+	"cabac.h"
+	<math.h>
+	<string.h>
+	"syntax.h"
+	"bitstream.h"
+	"defaulttables.h"
+	"intmath.h"
+	"inverse_transforms.h"
+	"decode_slice.h"
+	"cabac.h"
+	<math.h>
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/defaulttables.c
+	"defaulttables.h"
+	"defaulttables.h"
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/filter_image.c
+	"common.h"
+	"decode.h"
+	"defaulttables.h"
+	"intmath.h"
+	"decode_slice.h"
+	"common.h"
+	"decode.h"
+	"defaulttables.h"
+	"intmath.h"
+	"decode_slice.h"
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/intmath.c
+	<inttypes.h>
+	<inttypes.h>
 
 1384216671 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/lud.c
 	<stdlib.h>
@@ -1843,4 +1583,146 @@
 	"../image.h"
 	"lud.h"
 	"ff.h"
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"ludh264.h"
+	"../image.h"
+	"lud.h"
+	"ff.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/ludh264.h
+	"decode.h"
+	"decode.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/lud.h
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/ludh264.c
+	"ludh264.h"
+	"decode.h"
+	"system.h"
+	"ludh264.h"
+	"decode.h"
+	"system.h"
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/output.c
+	"decode.h"
+	"system.h"
+	"defaulttables.h"
+	<stdio.h>
+	<string.h>
+	"decode.h"
+	"system.h"
+	"defaulttables.h"
+	<stdio.h>
+	<string.h>
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/syntax.c
+	<string.h>
+	"system.h"
+	"common.h"
+	"syntax.h"
+	"bitstream.h"
+	"defaulttables.h"
+	<string.h>
+	"system.h"
+	"common.h"
+	"syntax.h"
+	"bitstream.h"
+	"defaulttables.h"
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Decoder/system.c
+	<inttypes.h>
+	<string.h>
+	"common.h"
+	"system.h"
+	"decode.h"
+	"defaulttables.h"
+	<inttypes.h>
+	<string.h>
+	"common.h"
+	"system.h"
+	"decode.h"
+	"defaulttables.h"
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/avccparser.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"../image.h"
+	"commonparser.h"
+	"../image.h"
+	"avccparser.h"
+	"ff.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"../image.h"
+	"commonparser.h"
+	"../image.h"
+	"avccparser.h"
+	"ff.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/commonparser.h
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/avccparser.h
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/iframeparser.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"../image.h"
+	"iframeparser.h"
+	"ff.h"
+	"../image.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"../image.h"
+	"iframeparser.h"
+	"ff.h"
+	"../image.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/H264Parser/iframeparser.h
+
+1383791186 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/image.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	"H264Parser/iframeparser.h"
+	"H264Parser/avccparser.h"
+	"H264Decoder/lud.h"
+	"Encoder/bmp2jpg.h"
+	"ff.h"
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	"H264Parser/iframeparser.h"
+	"H264Parser/avccparser.h"
+	"H264Decoder/lud.h"
+	"Encoder/bmp2jpg.h"
+	"ff.h"
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/populatearray.c
+	<stdio.h>
+	"populatearray.h"
+	"image.h"
+	"ff.h"
+	<stdio.h>
+	"populatearray.h"
+	"image.h"
+	"ff.h"
+
+1383619285 /home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/populatearray.h
+	"image.h"
+	"image.h"
+
+1383619285 source:/home/adam/Dropbox/Documents/Stanford/AA236A/snaps/ImageProcessing/sortimagearray.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
 
