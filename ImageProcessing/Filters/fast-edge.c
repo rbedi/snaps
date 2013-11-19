@@ -61,7 +61,9 @@ void canny_edge_detect(struct image * img_in) {
 
 }
 
-static inline void g_func(int x, int y, struct image * img, short * g, unsigned char * dir) {
+//lazily calculates sobel instead of storing it as the old calc_gradient_sobel function did.
+//Results in a few more operations that its predecessor, but results take 3B instead of 1.5MB
+static inline void g_sobel(int x, int y, struct image * img, short * g, unsigned char * dir) {
     int w = img->width;
 	int h = img->height;
 	int max_x = w - 3;
@@ -335,7 +337,7 @@ void non_max_suppression(struct image * img, struct image * img_in) {//, short g
 	for (y = 0; y < max_y; y += w) {
 		for (x = 0; x < max_x; x++) {
             direction = 0;
-            g_func(x, y, img_in, &curr_g, &direction);
+            g_sobel(x, y, img_in, &curr_g, &direction);
             //if (direction != dir[x+y]) {
              //   printf("[%d %d] func value %d does not match actual %d\n",x,y,direction, dir[x+y]);
             //}
@@ -343,8 +345,8 @@ void non_max_suppression(struct image * img, struct image * img_in) {//, short g
             //printf("%d\n", direction);
 			switch (direction) {
 				case 0:
-				    g_func(x, y + w, img_in, &next_g, &temp);
-                    g_func(x, y - w, img_in, &last_g, &temp);
+				    g_sobel(x, y + w, img_in, &next_g, &temp);
+                    g_sobel(x, y - w, img_in, &last_g, &temp);
                     if(curr_g > next_g && curr_g > last_g){
                         if(curr_g > 255){
 					//if (g[x + y] > g[x + y - w] && g[x + y] > g[x + y + w]) {
@@ -358,8 +360,8 @@ void non_max_suppression(struct image * img, struct image * img_in) {//, short g
 					}
 					break;
 				case 1:
-				    g_func(x, y + w + 1, img_in, &next_g, &temp);
-                    g_func(x, y - w - 1, img_in, &last_g, &temp);
+				    g_sobel(x, y + w + 1, img_in, &next_g, &temp);
+                    g_sobel(x, y - w - 1, img_in, &last_g, &temp);
                     if(curr_g > next_g && curr_g > last_g){
                         if(curr_g > 255){
 					//if (g[x + y] > g[x + y - w - 1] && g[x + y] > g[x + y + w + 1]) {
@@ -373,8 +375,8 @@ void non_max_suppression(struct image * img, struct image * img_in) {//, short g
 					}
 					break;
 				case 2:
-				    g_func(x, y + 1, img_in, &next_g, &temp);
-                    g_func(x, y - 1, img_in, &last_g, &temp);
+				    g_sobel(x, y + 1, img_in, &next_g, &temp);
+                    g_sobel(x, y - 1, img_in, &last_g, &temp);
                     if(curr_g > next_g && curr_g > last_g){
                         if(curr_g > 255){
 					//if (g[x + y] > g[x + y - 1] && g[x + y] > g[x + y + 1]) {
@@ -388,8 +390,8 @@ void non_max_suppression(struct image * img, struct image * img_in) {//, short g
 					}
 					break;
 				case 3:
-				    g_func(x, y + w -1, img_in, &next_g, &temp);
-                    g_func(x, y - w + 1, img_in, &last_g, &temp);
+				    g_sobel(x, y + w -1, img_in, &next_g, &temp);
+                    g_sobel(x, y - w + 1, img_in, &last_g, &temp);
                     if(curr_g > next_g && curr_g > last_g){
                         if(curr_g > 255){
 					//if (g[x + y] > g[x + y - w + 1] && g[x + y] > g[x + y + w - 1]) {
