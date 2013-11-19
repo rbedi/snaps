@@ -22,10 +22,10 @@ void cornerdetect(unsigned char* buffer, int col2, int row2,unsigned char* numbe
     float magnitude = 0;
     int totalvalue = 0;
 
-    if(cols<50 && cols>40 && rows<11)
-    {
-        return;
-    }
+    //if(cols<50 && cols>40 && rows<11)
+    //{
+    //    return;
+    //}
 
     for(row=0;row<32;row++)
     {

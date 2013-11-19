@@ -46,7 +46,7 @@ int canny(int j)
 //	}
 //	else
 //	{
-       img.pixel_data =  CurrentFrame.framebits;
+       img.pixel_data =  (unsigned char *)CurrentFrame.framebits;
 //	}
 
 //***********

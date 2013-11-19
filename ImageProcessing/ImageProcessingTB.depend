@@ -538,7 +538,7 @@
 	"filemanager.h"
 	"ff.h"
 
-1384218530 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\andrewedges.c
+1384827541 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\andrewedges.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -586,7 +586,7 @@
 
 1384824089 c:\users\sean\documents\github\snaps\imageprocessing\filters\fast-edge.h
 
-1383609788 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\fast-edge.c
+1384824194 source:c:\users\sean\documents\github\snaps\imageprocessing\filters\fast-edge.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
