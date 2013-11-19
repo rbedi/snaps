@@ -52,9 +52,9 @@ void canny_edge_detect(struct image * img_in) {
 	img_scratch.width = img_in->width;
 	img_scratch.height = img_in->height;
 	img_scratch.pixel_data = img_scratch_data;
-	//calc_gradient_sobel(img_in, /*g,*/ dir);
+	//calc_gradient_sobel(img_in, g, dir);
 	printf("*** performing non-maximum suppression ***\n");
-	non_max_suppression(&img_scratch, img_in/*, g, dir*/);
+	non_max_suppression(&img_scratch, img_in);//, g, dir);
 	estimate_threshold(&img_scratch, &high, &low);
 	hysteresis(high, low, &img_scratch, img_in);
 	//free(img_scratch_data);
@@ -70,45 +70,47 @@ static inline void g_func(int x, int y, struct image * img, short * g, unsigned 
 	int g_y;
 	float g_div;
     if (x <3 || y < w*3 || x >= max_x || y >= max_y) {
-        return 0;
-    }
-    g_x = (2 * img->pixel_data[x + y + 1]
+        *g = 0;
+        *dir = 0;
+    } else {
+        g_x = (2 * img->pixel_data[x + y + 1]
 				+ img->pixel_data[x + y - w + 1]
 				+ img->pixel_data[x + y + w + 1]
 				- 2 * img->pixel_data[x + y - 1]
 				- img->pixel_data[x + y - w - 1]
 				- img->pixel_data[x + y + w - 1]);
-    g_y = 2 * img->pixel_data[x + y - w]
+        g_y = 2 * img->pixel_data[x + y - w]
 				+ img->pixel_data[x + y - w + 1]
 				+ img->pixel_data[x + y - w - 1]
 				- 2 * img->pixel_data[x + y + w]
 				- img->pixel_data[x + y + w + 1]
 				- img->pixel_data[x + y + w - 1];
-	*g = sqrt(g_x * g_x + g_y * g_y);
-	if (g_x == 0) {
-        *dir = 2;
-    } else {
-		g_div = g_y / (float) g_x;
+        *g = sqrt(g_x * g_x + g_y * g_y);
+        if (g_x == 0) {
+            *dir = 2;
+        } else {
+            g_div = g_y / (float) g_x;
 
-		if (g_div < 0) {
-			if (g_div < -2.41421356237) {
-				*dir = 0;
-			} else {
-				if (g_div < -0.414213562373) {
-					*dir = 1;
-				} else {
-					*dir = 2;
-				}
-			}
-		} else {
-			if (g_div > 2.41421356237) {
-				*dir = 0;
-			} else {
-				if (g_div > 0.414213562373) {
-					*dir = 3;
-				} else {
-					*dir = 2;
-				}
+            if (g_div < 0) {
+                if (g_div < -2.41421356237) {
+                    *dir = 0;
+                } else {
+                    if (g_div < -0.414213562373) {
+                        *dir = 1;
+                    } else {
+                        *dir = 2;
+                    }
+                }
+            } else {
+                if (g_div > 2.41421356237) {
+                    *dir = 0;
+                } else {
+                    if (g_div > 0.414213562373) {
+                        *dir = 3;
+                    } else {
+                        *dir = 2;
+                    }
+                }
 			}
 		}
 	}
@@ -184,8 +186,8 @@ void gaussian_noise_reduce(struct image * img_in)
 	calculates the result of the Sobel operator - http://en.wikipedia.org/wiki/Sobel_operator - and estimates edge direction angle
 */
 /*void calc_gradient_sobel(struct image * img_in, int g_x[], int g_y[], int g[], int dir[]) {//float theta[]) {*/
-//void calc_gradient_sobel(struct image * img_in, /*short g[],*/ unsigned char dir[]) {
-/*
+/*void calc_gradient_sobel(struct image * img_in, short g[], unsigned char dir[]) {
+
 	int w, h, x, y, max_x, max_y, g_x, g_y;
 	float g_div;
 	w = img_in->width;
@@ -207,7 +209,7 @@ void gaussian_noise_reduce(struct image * img_in)
 				- img_in->pixel_data[x + y + w + 1]
 				- img_in->pixel_data[x + y + w - 1];
 			#ifndef ABS_APPROX
-			//g[x + y] = sqrt(g_x * g_x + g_y * g_y);
+			g[x + y] = sqrt(g_x * g_x + g_y * g_y);
 			#endif
 			#ifdef ABS_APPROX
 			g[x + y] = abs(g_x[x + y]) + abs(g_y[x + y]);
@@ -243,8 +245,8 @@ void gaussian_noise_reduce(struct image * img_in)
 
 	}
 
-}*/
-
+}
+*/
 /*
 	CALC_GRADIENT_SCHARR
 	calculates the result of the Scharr version of the Sobel operator - http://en.wikipedia.org/wiki/Sobel_operator - and estimates edge direction angle
@@ -320,7 +322,7 @@ void calc_gradient_scharr(struct image * img_in, short g_x[], short g_y[], short
 	if the rounded edge direction angle is 90 degrees, checks the east and west directions
 	if the rounded edge direction angle is 135 degrees, checks the northeast and southwest directions
 */
-void non_max_suppression(struct image * img, struct image * img_in/*, short g[], unsigned char dir[]*/) {//float theta[]) {
+void non_max_suppression(struct image * img, struct image * img_in) {//, short g[], unsigned char dir[]) {//float theta[]) {
 
 	int w, h, x, y, max_x, max_y;
 	short curr_g, next_g, last_g;
@@ -335,7 +337,7 @@ void non_max_suppression(struct image * img, struct image * img_in/*, short g[],
             direction = 0;
             g_func(x, y, img_in, &curr_g, &direction);
             //if (direction != dir[x+y]) {
-            //    printf("[%d %d] func value %d does not match actual %d\n",x,y,direction, dir[x+y]);
+             //   printf("[%d %d] func value %d does not match actual %d\n",x,y,direction, dir[x+y]);
             //}
             //curr_dir= d_func()
             //printf("%d\n", direction);
