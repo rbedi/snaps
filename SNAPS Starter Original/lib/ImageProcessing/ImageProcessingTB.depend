@@ -1,0 +1,389 @@
+# depslib dependency file v1.0
+1361842121 source:c:\snaps\code\lib\imageprocessing\convertmatrixtype.c
+
+1362252850 source:c:\snaps\code\lib\imageprocessing\converter\fillpixelmatrix.c
+	<stdio.h>
+	<stdlib.h>
+	"../image.h"
+	"fillpixelmatrix.h"
+
+1362951181 c:\snaps\code\lib\imageprocessing\image.h
+	"filemanager.h"
+
+1362252865 c:\snaps\code\lib\imageprocessing\converter\fillpixelmatrix.h
+
+1361842122 source:c:\snaps\code\lib\imageprocessing\converter\yuvprocesser.c
+	<stdio.h>
+	<stdlib.h>
+	"../image.h"
+	<math.h>
+
+1353650654 source:c:\snaps\code\lib\imageprocessing\encoder\colorconversion.c
+	"ejpgl.h"
+	"ColorConversion.h"
+
+1359279474 c:\snaps\code\lib\imageprocessing\encoder\ejpgl.h
+
+1353356365 c:\snaps\code\lib\imageprocessing\encoder\colorconversion.h
+	"ejpgl.h"
+
+1362259039 source:c:\snaps\code\lib\imageprocessing\encoder\dct.c
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"dct.h"
+	"zzq.h"
+
+1353650396 c:\snaps\code\lib\imageprocessing\encoder\dct.h
+
+1361849674 source:c:\snaps\code\lib\imageprocessing\encoder\huffman.c
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"huffman.h"
+	<string.h>
+	"bmp2jpg.h"
+
+1361849507 c:\snaps\code\lib\imageprocessing\encoder\huffman.h
+
+1361068504 source:c:\snaps\code\lib\imageprocessing\encoder\jpeg.c
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"../image.h"
+	"jpeg.h"
+
+1359608342 c:\snaps\code\lib\imageprocessing\encoder\jpeg.h
+	"ejpgl.h"
+	"../image.h"
+
+1362259027 source:c:\snaps\code\lib\imageprocessing\encoder\zzq.c
+	<stdio.h>
+	<stdlib.h>
+	"ejpgl.h"
+	"zzq.h"
+	"huffman.h"
+
+1353356205 c:\snaps\code\lib\imageprocessing\encoder\zzq.h
+	"ejpgl.h"
+
+1361068625 source:c:\snaps\code\lib\imageprocessing\filters\circledetect.c
+	"../image.h"
+	<math.h>
+	"circledetect.h"
+
+1359608440 c:\snaps\code\lib\imageprocessing\filters\circledetect.h
+	"../image.h"
+
+1363229425 source:c:\snaps\code\lib\imageprocessing\filters\edgedetect.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	"../image.h"
+	"edgedetect.h"
+	<string.h>
+	"imageio.h"
+	"fast-edge.h"
+
+1361068504 source:c:\snaps\code\lib\imageprocessing\filters\histogram.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"../image.h"
+
+1362009979 source:c:\snaps\code\lib\imageprocessing\h264decoder\bitstream.c
+	<inttypes.h>
+	"bitstream_types.h"
+	"intmath.h"
+	<string.h>
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\bitstream_types.h
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\intmath.h
+	<inttypes.h>
+	"common.h"
+
+1362180976 c:\snaps\code\lib\imageprocessing\h264decoder\common.h
+	<assert.h>
+	<stdlib.h>
+	<stdio.h>
+	<inttypes.h>
+
+1361949466 source:c:\snaps\code\lib\imageprocessing\h264decoder\cabac.c
+	<stdint.h>
+
+1362180936 source:c:\snaps\code\lib\imageprocessing\h264decoder\decode.c
+	"syntax.h"
+	"decode.h"
+	<string.h>
+	"defaulttables.h"
+	"bitstream.h"
+	"decode_slice.h"
+	"system.h"
+	"cabac.h"
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\syntax.h
+	"syntax_types.h"
+	"bitstream_types.h"
+	"decode.h"
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\syntax_types.h
+	<inttypes.h>
+	"common.h"
+	"bitstream_types.h"
+
+1362180380 c:\snaps\code\lib\imageprocessing\h264decoder\decode.h
+	"common.h"
+	"syntax.h"
+	"bitstream_types.h"
+	"../image.h"
+	"ff.h"
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\defaulttables.h
+	<inttypes.h>
+	"syntax.h"
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\bitstream.h
+	"intmath.h"
+	"bitstream_types.h"
+	"syntax_types.h"
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\decode_slice.h
+	"decode.h"
+	"bitstream_types.h"
+	<inttypes.h>
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\system.h
+	"decode.h"
+	"syntax_types.h"
+
+1362024760 c:\snaps\code\lib\imageprocessing\h264decoder\cabac.h
+	"intmath.h"
+	"decode.h"
+	"cabac_data.h"
+	"bitstream.h"
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\cabac_data.h
+
+1362628754 source:c:\snaps\code\lib\imageprocessing\h264decoder\decode_image.c
+	<string.h>
+	"common.h"
+	"decode.h"
+	"defaulttables.h"
+	"intmath.h"
+	"decode_slice.h"
+	"system.h"
+	"inverse_transforms.h"
+	"../image.h"
+	<math.h>
+	"ff.h"
+	"decode_image_intra.h"
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\inverse_transforms.h
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\decode_image_intra.h
+
+1362281138 source:c:\snaps\code\lib\imageprocessing\h264decoder\decode_slice.c
+	<string.h>
+	"syntax.h"
+	"bitstream.h"
+	"defaulttables.h"
+	"intmath.h"
+	"inverse_transforms.h"
+	"decode_slice.h"
+	"cabac.h"
+	<math.h>
+
+1361949466 source:c:\snaps\code\lib\imageprocessing\h264decoder\defaulttables.c
+	"defaulttables.h"
+
+1362281155 source:c:\snaps\code\lib\imageprocessing\h264decoder\filter_image.c
+	"common.h"
+	"decode.h"
+	"defaulttables.h"
+	"intmath.h"
+	"decode_slice.h"
+
+1361949466 source:c:\snaps\code\lib\imageprocessing\h264decoder\intmath.c
+	<inttypes.h>
+
+1362452784 source:c:\snaps\code\lib\imageprocessing\h264decoder\lud.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	"ludh264.h"
+	"../image.h"
+	"lud.h"
+	"ff.h"
+
+1361949466 c:\snaps\code\lib\imageprocessing\h264decoder\ludh264.h
+	"decode.h"
+
+1362009777 source:c:\snaps\code\lib\imageprocessing\h264decoder\ludh264.c
+	"ludh264.h"
+	"decode.h"
+	"system.h"
+
+1361949466 source:c:\snaps\code\lib\imageprocessing\h264decoder\output.c
+	"decode.h"
+	"system.h"
+	"defaulttables.h"
+	<stdio.h>
+	<string.h>
+
+1362180925 source:c:\snaps\code\lib\imageprocessing\h264decoder\syntax.c
+	<string.h>
+	"system.h"
+	"common.h"
+	"syntax.h"
+	"bitstream.h"
+	"defaulttables.h"
+
+1362281138 source:c:\snaps\code\lib\imageprocessing\h264decoder\system.c
+	<inttypes.h>
+	<string.h>
+	"common.h"
+	"system.h"
+	"decode.h"
+	"defaulttables.h"
+
+1362280159 source:c:\snaps\code\lib\imageprocessing\h264parser\avccparser.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"../image.h"
+	"commonparser.h"
+	"../image.h"
+	"avccparser.h"
+	"ff.h"
+
+1362215891 c:\snaps\code\lib\imageprocessing\h264parser\commonparser.h
+
+1362631077 source:c:\snaps\code\lib\imageprocessing\h264parser\iframeparser.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"../image.h"
+	"iframeparser.h"
+	"ff.h"
+	"../image.h"
+
+1361842122 source:c:\snaps\code\lib\imageprocessing\h264parser\parser.c
+
+1361064842 source:c:\snaps\code\lib\imageprocessing\earthfind.c
+	"image.h"
+	"earthfind.h"
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1354520574 c:\snaps\code\lib\imageprocessing\earthfind.h
+
+1366076404 source:c:\snaps\code\lib\imageprocessing\image.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+	"H264Parser/iframeparser.h"
+	"H264Parser/avccparser.h"
+	"H264Decoder/lud.h"
+	"Encoder/bmp2jpg.h"
+	"ff.h"
+
+1362253857 source:c:\snaps\code\lib\imageprocessing\populatearray.c
+	<stdio.h>
+	"populatearray.h"
+	"image.h"
+	"ff.h"
+
+1359608395 c:\snaps\code\lib\imageprocessing\populatearray.h
+	"image.h"
+
+1361849706 source:c:\snaps\code\lib\imageprocessing\sortimagearray.c
+	<stdio.h>
+	<stdlib.h>
+	"image.h"
+
+1362279453 source:c:\snaps\code\lib\imageprocessing\encoder\bmp2jpg.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	"ejpgl.h"
+	"bmp2jpg.h"
+	"ColorConversion.h"
+	"dct.h"
+	"huffman.h"
+	"jpeg.h"
+	"zzq.h"
+	"../image.h"
+	"../Converter/fillpixelmatrix.h"
+	"ff.h"
+	"../image.h"
+
+1361954165 c:\snaps\code\lib\imageprocessing\encoder\bmp2jpg.h
+	"ejpgl.h"
+	"../image.h"
+
+1361957034 c:\snaps\code\lib\imageprocessing\h264parser\iframeparser.h
+
+1361848983 c:\snaps\code\lib\imageprocessing\h264parser\avccparser.h
+
+1362017738 c:\snaps\code\lib\imageprocessing\h264decoder\lud.h
+
+1363230788 c:\snaps\code\lib\imageprocessing\filemanager.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	"ff.h"
+
+1362180598 source:c:\snaps\code\lib\imageprocessing\filemanager.c
+	"filemanager.h"
+	"ff.h"
+
+1362971040 c:\snaps\code\lib\imageprocessing\filters\edgedetect.h
+	"../image.h"
+
+1362800218 c:\snaps\code\lib\imageprocessing\filters\imageio.h
+
+1362976335 c:\snaps\code\lib\imageprocessing\filters\fast-edge.h
+
+1362805468 source:c:\snaps\code\lib\imageprocessing\filters\fast-edge.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"imageio.h"
+	"fast-edge.h"
+
+1362777184 source:c:\snaps\code\lib\imageprocessing\filters\imageio.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"imageio.h"
+
+1362292750 source:c:\snaps\code\lib\imageprocessing\filters\example.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+	<time.h>
+	"imageio.h"
+	"fast-edge.h"
+
+1362778856 source:c:\snaps\code\lib\imageprocessing\filters\houghes.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<math.h>
+
+1363225830 source:c:\snaps\code\lib\imageprocessing\filters\andrewedges.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1363224609 source:c:\snaps\code\lib\imageprocessing\filters\canny2.c
+
